@@ -34,7 +34,7 @@ class HeightResultModel  {
 
     private fun shareData(context: Context) {
         val shareBody = (context.resources.getString(R.string.your_Childs_Adulthood_height)
-                + " : " + height + " " + context.resources.getString(R.string.cm))
+                + " : $height " + context.resources.getString(R.string.cm))
         context.share(shareBody, context.resources.getString(R.string.share_main))
     }
 

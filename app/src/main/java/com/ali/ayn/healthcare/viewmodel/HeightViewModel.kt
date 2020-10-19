@@ -1,18 +1,18 @@
 package com.ali.ayn.healthcare.viewmodel
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import javax.inject.Singleton
 
-class HeightViewModel : ViewModel() {
+class HeightViewModel @ViewModelInject constructor() : ViewModel() {
 
-    val specifications = MutableLiveData<Map<Long, Boolean>>()
-
-    fun setHeight(isBoy: Boolean, fatherHeight: Int, motherHeight: Int) {
+    inline fun setHeight(isBoy: Boolean, fatherHeight: Int, motherHeight: Int, callback : (Map<Long, Boolean>) -> Unit) {
         var height = ((fatherHeight + motherHeight) / 2).toDouble()
         if (isBoy)
             height += 6.5
         else
             height -= 6.5
-        specifications.postValue(mapOf(height.toLong() to isBoy))
+        callback.invoke(mapOf(height.toLong() to isBoy))
     }
 }

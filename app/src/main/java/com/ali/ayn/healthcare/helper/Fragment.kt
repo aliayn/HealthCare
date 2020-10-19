@@ -1,5 +1,6 @@
 package com.ali.ayn.healthcare.helper
 
+import android.os.Bundle
 import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -19,3 +20,6 @@ fun Fragment.findNavController(): NavController =
 
 fun Fragment.navigate(@IdRes resId: Int): Unit =
     findNavController().navigate(resId)
+
+fun Fragment.navigate(@IdRes resId: Int, bundle: Bundle): Unit =
+    findNavController().navigate(resId, bundle)

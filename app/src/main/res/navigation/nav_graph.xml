@@ -17,5 +17,13 @@
         android:id="@+id/heightCalculatorFragment"
         android:name="com.ali.ayn.healthcare.ui.fragment.HeightCalculatorFragment"
         android:label="height_calculator_fragment"
-        tools:layout="@layout/height_calculator_fragment" />
+        tools:layout="@layout/height_calculator_fragment" >
+        <action
+            android:id="@+id/action_heightCalculatorFragment_to_heightResultFragment"
+            app:destination="@id/heightResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heightResultFragment"
+        android:name="com.ali.ayn.healthcare.ui.fragment.HeightResultFragment"
+        android:label="HeightResultFragment" />
 </navigation>
