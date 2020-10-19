@@ -3,10 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment2">
+    app:startDestination="@id/mainFragment">
     <fragment
-        android:id="@+id/mainFragment2"
+        android:id="@+id/mainFragment"
         android:name="com.ali.ayn.healthcare.ui.fragment.MainFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment" />
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_heightCalculatorFragment"
+            app:destination="@id/heightCalculatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heightCalculatorFragment"
+        android:name="com.ali.ayn.healthcare.ui.fragment.HeightCalculatorFragment"
+        android:label="height_calculator_fragment"
+        tools:layout="@layout/height_calculator_fragment" />
 </navigation>

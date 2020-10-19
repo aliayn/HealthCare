@@ -11,56 +11,12 @@
         android:roundIcon="@mipmap/icon_app"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
-        <meta-data
-            android:name="DATABASE"
-            android:value="healthcare.db" />
-        <meta-data
-            android:name="VERSION"
-            android:value="3" />
-        <meta-data
-            android:name="QUERY_LOG"
-            android:value="true" />
-
-        <activity
-            android:name=".activity.splash.SplashActivity"
+        <activity android:name=".ui.activity.MainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/splashTheme">
-        </activity>
-
-        <activity
-            android:name=".activity.main.MainActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity.bmiCalculator.BMICalculatorActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity.bmiResult.BMIResultActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity.heightCalculator.HeightCalculatorActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity.heightResult.HeightResultActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".activity.bmiSaved.BmiSavedActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-
-        <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
