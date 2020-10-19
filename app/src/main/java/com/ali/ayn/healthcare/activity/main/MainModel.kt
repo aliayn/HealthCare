@@ -53,7 +53,7 @@ class MainModel constructor(private val sharePrefManager: SharePrefManager) {
     private fun showViewMenu(height: View, bmi: View, menu: View, context1: Context) {
         menu.isEnabled = false
         MaterialTapTargetPrompt.Builder(context1 as Activity)
-            .setTarget(R.id.btn_navigation)
+            //.setTarget(R.id.btn_navigation)
             .setPrimaryText(context1.getResources().getString(R.string.menu))
             .setSecondaryText(context1.getResources().getString(R.string.menu_detail))
             .setIconDrawable(context1.getResources().getDrawable(R.drawable.ic_dehaze_black_24dp))

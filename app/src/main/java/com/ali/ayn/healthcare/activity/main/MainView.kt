@@ -14,9 +14,9 @@ import org.jetbrains.anko.sdk27.coroutines.onClick
 class MainView(context: Context) : BaseView(context, R.layout.activity_main) {
 
     fun initViews(presenter: MainPresenter) {
-        btn_navigation.onClick { /*drawer_layout.openDrawer(Gravity.START, true)*/ }
+       /* btn_navigation.onClick { *//*drawer_layout.openDrawer(Gravity.START, true)*//* }
         relative_main_height.onClick { presenter.heightActivity(context) }
-        relative_main_bmi.onClick { presenter.bmiActivity(context) }
+        relative_main_bmi.onClick { presenter.bmiActivity(context) }*/
         nav_view.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.bmi_saved -> presenter.bmiSavedActivity(context)
@@ -39,7 +39,7 @@ class MainView(context: Context) : BaseView(context, R.layout.activity_main) {
     }
 
     fun checkTapTarget(presenter: MainPresenter) {
-        presenter.checkFirstLogin(relative_main_height, relative_main_bmi, btn_navigation, context)
+       // presenter.checkFirstLogin(relative_main_height, relative_main_bmi, btn_navigation, context)
     }
 
     private fun applyFontToMenuItem(mi: MenuItem) {

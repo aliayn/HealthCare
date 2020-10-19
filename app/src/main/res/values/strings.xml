@@ -2,6 +2,8 @@
 
     <string name="app_name">Health Care</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="Female">Female</string>
     <string name="Male">Male</string>
     <string name="calculate">Compute</string>
