@@ -1,14 +1,16 @@
 <component name="libraryTable">
   <library name="Gradle: com.xw.repo:bubbleseekbar:3.19-lite@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bb7e6f4ab5bed5c0e86911e70446b20a/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4d446d5d87f6e82cfb9d8c928207f471/jetified-bubbleseekbar-3.19-lite/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bb7e6f4ab5bed5c0e86911e70446b20a/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bb7e6f4ab5bed5c0e86911e70446b20a/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bb7e6f4ab5bed5c0e86911e70446b20a/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4d446d5d87f6e82cfb9d8c928207f471/jetified-bubbleseekbar-3.19-lite/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4d446d5d87f6e82cfb9d8c928207f471/jetified-bubbleseekbar-3.19-lite/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4d446d5d87f6e82cfb9d8c928207f471/jetified-bubbleseekbar-3.19-lite/AndroidManifest.xml" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.xw.repo/bubbleseekbar/3.19-lite/83e59836c6db8b5a7b1379e32766a82bf10610b7/bubbleseekbar-3.19-lite-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.xw.repo/bubbleseekbar/3.19-lite/269901d39b1f5cab2937f5a73edc1374c6a26ead/bubbleseekbar-3.19-lite-sources.jar!/" />
     </SOURCES>

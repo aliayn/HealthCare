@@ -2,9 +2,10 @@
   <library name="Gradle: org.jetbrains.anko:anko-appcompat-v7-coroutines:0.10.8@aar">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f289017c4628425d0cdec58d1cefabf7/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2000c4f0002f2a046f07e9892fa4b6aa/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2000c4f0002f2a046f07e9892fa4b6aa/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2000c4f0002f2a046f07e9892fa4b6aa/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b94499e082b2f9ed618b3a9cffee3ec7/jetified-anko-appcompat-v7-coroutines-0.10.8/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b94499e082b2f9ed618b3a9cffee3ec7/jetified-anko-appcompat-v7-coroutines-0.10.8/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b94499e082b2f9ed618b3a9cffee3ec7/jetified-anko-appcompat-v7-coroutines-0.10.8/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
