@@ -1,7 +1,7 @@
 package com.ali.ayn.healthcare.mapper
 
 import com.ali.ayn.healthcare.activity.bmiSaved.adapter.mvp.BmiSavedAdapterModel
-import com.ali.ayn.healthcare.db.bmiResult.BmiData
+import com.ali.ayn.healthcare.data.bmiResult.BmiData
 
 class BmiDataMapper {
 

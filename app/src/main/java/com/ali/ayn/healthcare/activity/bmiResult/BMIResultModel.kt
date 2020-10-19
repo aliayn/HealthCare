@@ -4,8 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.widget.ImageButton
 import com.ali.ayn.healthcare.R
-import com.ali.ayn.healthcare.db.bmiResult.BmiDAO
-import com.ali.ayn.healthcare.db.bmiResult.BmiData
+import com.ali.ayn.healthcare.data.bmiResult.BmiDAO
+import com.ali.ayn.healthcare.data.bmiResult.BmiData
 import org.jetbrains.anko.imageResource
 import org.jetbrains.anko.share
 import java.util.*

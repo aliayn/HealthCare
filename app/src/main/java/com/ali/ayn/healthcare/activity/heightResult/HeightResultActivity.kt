@@ -3,7 +3,7 @@ package com.ali.ayn.healthcare.activity.heightResult
 import android.app.Activity
 import android.content.Context
 import com.ali.ayn.healthcare.base.BaseActivity
-import com.ali.ayn.healthcare.custom.App.Companion.component
+import com.ali.ayn.healthcare.App.Companion.component
 
 open class HeightResultActivity : BaseActivity<HeightResultView, HeightResultPresenter>() {
 

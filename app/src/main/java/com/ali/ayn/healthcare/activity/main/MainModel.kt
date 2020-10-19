@@ -9,7 +9,7 @@ import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.activity.bmiCalculator.BMICalculatorActivity
 import com.ali.ayn.healthcare.activity.bmiSaved.BmiSavedActivity
 import com.ali.ayn.healthcare.activity.heightCalculator.HeightCalculatorActivity
-import com.ali.ayn.healthcare.db.SharePrefManager
+import com.ali.ayn.healthcare.data.SharePrefManager
 import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt
 import javax.inject.Inject
 

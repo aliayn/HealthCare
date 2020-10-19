@@ -2,7 +2,7 @@ package com.ali.ayn.healthcare.mapper;
 
 import android.content.Context;
 import com.ali.ayn.healthcare.R;
-import com.ali.ayn.healthcare.db.bmiResult.BmiData;
+import com.ali.ayn.healthcare.data.bmiResult.BmiData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;

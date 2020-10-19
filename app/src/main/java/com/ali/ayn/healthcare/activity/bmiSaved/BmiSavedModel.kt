@@ -5,7 +5,7 @@ import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.activity.bmiResult.BMIResultActivity
 import com.ali.ayn.healthcare.activity.bmiSaved.adapter.BmiSavedAdapter
 import com.ali.ayn.healthcare.activity.bmiSaved.adapter.ItemClickListener
-import com.ali.ayn.healthcare.db.bmiResult.BmiDAO
+import com.ali.ayn.healthcare.data.bmiResult.BmiDAO
 import com.ali.ayn.healthcare.mapper.BmiDataMapper
 import com.ali.ayn.healthcare.mapper.ChartDataMapper
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
