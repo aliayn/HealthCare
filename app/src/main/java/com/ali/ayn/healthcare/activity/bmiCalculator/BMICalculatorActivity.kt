@@ -2,8 +2,8 @@ package com.ali.ayn.healthcare.activity.bmiCalculator
 
 import android.app.Activity
 import android.content.Context
-import com.ali.ayn.healthcare.base.BaseActivity
 import com.ali.ayn.healthcare.App.Companion.component
+import com.ali.ayn.healthcare.base.BaseActivity
 
 class BMICalculatorActivity : BaseActivity<BMICalculatorView, BMICalculatorPresenter>() {
 
@@ -21,6 +21,7 @@ class BMICalculatorActivity : BaseActivity<BMICalculatorView, BMICalculatorPrese
         fun start(context: Context) {
             start(context, BMICalculatorActivity::class.java)
         }
+
         fun fa(): Activity? {
             return getFa()
         }

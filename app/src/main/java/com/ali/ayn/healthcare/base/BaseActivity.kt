@@ -7,7 +7,7 @@ import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import javax.inject.Inject
 
 abstract class BaseActivity<V : BaseView, P : BasePresenter<V, *>> : AppCompatActivity() {
@@ -65,7 +65,14 @@ abstract class BaseActivity<V : BaseView, P : BasePresenter<V, *>> : AppCompatAc
             context.startActivity(myIntent)
         }
 
-        fun start(context: Context, bmi: Int, isSaved: Boolean, time: Long, isMale: Boolean, cls: Class<*>) {
+        fun start(
+            context: Context,
+            bmi: Int,
+            isSaved: Boolean,
+            time: Long,
+            isMale: Boolean,
+            cls: Class<*>
+        ) {
             val myIntent = Intent(context, cls)
             myIntent.addFlags(FLAG_ACTIVITY_SINGLE_TOP or FLAG_ACTIVITY_NEW_TASK)
             myIntent.putExtra("bmi", bmi)

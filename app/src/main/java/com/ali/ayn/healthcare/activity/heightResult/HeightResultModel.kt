@@ -2,7 +2,6 @@ package com.ali.ayn.healthcare.activity.heightResult
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Typeface
 import android.widget.ImageButton
 import android.widget.TextView
 import com.ali.ayn.healthcare.R
@@ -22,8 +21,14 @@ class HeightResultModel @Inject constructor() {
         isBoy = intent.getBooleanExtra("isBoy", true)
     }
 
-    fun initView(imageView: SimpleDraweeView, textView: TextView, context: Context, imageButton: ImageButton) {
-        textView.text = String.format("%s %s", height.toString(), context.resources.getString(R.string.cm))
+    fun initView(
+        imageView: SimpleDraweeView,
+        textView: TextView,
+        context: Context,
+        imageButton: ImageButton
+    ) {
+        textView.text =
+            String.format("%s %s", height.toString(), context.resources.getString(R.string.cm))
         imageButton.onClick { shareData(context) }
         setPhoto(imageView)
     }
@@ -31,7 +36,7 @@ class HeightResultModel @Inject constructor() {
     private fun shareData(context: Context) {
         val shareBody = (context.resources.getString(R.string.your_Childs_Adulthood_height)
                 + " : " + height + " " + context.resources.getString(R.string.cm))
-        context.share(shareBody,context.resources.getString(R.string.share_main))
+        context.share(shareBody, context.resources.getString(R.string.share_main))
     }
 
     private fun setPhoto(imageView: SimpleDraweeView) {

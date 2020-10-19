@@ -1,8 +1,8 @@
 package com.ali.ayn.healthcare.activity.bmiSaved
 
 import android.content.Context
-import android.support.v7.widget.LinearLayoutManager
 import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.activity.bmiSaved.adapter.BmiSavedAdapter
 import com.ali.ayn.healthcare.base.BaseView
@@ -13,7 +13,7 @@ import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener
 import kotlinx.android.synthetic.main.activity_bmi_saved.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
-import java.util.ArrayList
+import java.util.*
 
 class BmiSavedView(context: Context) : BaseView(context, R.layout.activity_bmi_saved) {
 

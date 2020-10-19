@@ -33,7 +33,7 @@ class HeightResultPresenter @Inject constructor(model: HeightResultModel) :
         model.initView(image_height_result, txt_height_result, context, btn_share_result)
     }
 
-    fun finish(){
+    fun finish() {
         model.finish()
     }
 

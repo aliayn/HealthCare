@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true">
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layoutDirection="rtl">
@@ -20,11 +19,11 @@
                 style="@style/BackButton"
                 app:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
 
-        </android.support.v7.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <android.support.design.widget.CoordinatorLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize">
@@ -41,8 +40,8 @@
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/standard_margin_x2"
-                app:checked="false"
                 android:layoutDirection="rtl"
+                app:checked="false"
                 app:forceAspectRatio="false"
                 app:switchBkgCheckedColor="@color/colorPrimary"
                 app:switchBkgNotCheckedColor="@color/blue"
@@ -170,8 +169,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="@dimen/standard_margin_x2"
                 android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/standard_margin_x2"
                 android:background="@drawable/calculate_button_background"
                 android:text="@string/calculate"
                 android:textColor="@color/white"
@@ -179,7 +178,7 @@
 
         </RelativeLayout>
 
-    </android.support.design.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

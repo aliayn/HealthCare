@@ -77,7 +77,7 @@ class BmiSavedModel @Inject constructor(
     }
 
     private fun getDataSet(): ArrayList<IBarDataSet> {
-        return ChartDataMapper.creator(bmiDAO.findAll(),context)
+        return ChartDataMapper.creator(bmiDAO.findAll(), context)
     }
 
 }

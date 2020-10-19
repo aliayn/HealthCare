@@ -20,7 +20,8 @@ class BmiSavedAdapter @Inject constructor(private val mainAdapterPresenter: BmiS
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, position: Int): BmiSavedViewHolder {
-        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.bmi_saved_recycler_layout, viewGroup, false)
+        val view = LayoutInflater.from(viewGroup.context)
+            .inflate(R.layout.bmi_saved_recycler_layout, viewGroup, false)
         return BmiSavedViewHolder(view)
     }
 

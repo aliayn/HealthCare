@@ -2,8 +2,8 @@ package com.ali.ayn.healthcare.activity.heightCalculator
 
 import android.app.Activity
 import android.content.Context
-import com.ali.ayn.healthcare.base.BaseActivity
 import com.ali.ayn.healthcare.App.Companion.component
+import com.ali.ayn.healthcare.base.BaseActivity
 
 class HeightCalculatorActivity : BaseActivity<HeightCalculatorView, HeightCalculatorPresenter>() {
 
@@ -22,6 +22,7 @@ class HeightCalculatorActivity : BaseActivity<HeightCalculatorView, HeightCalcul
         fun start(context: Context) {
             start(context, HeightCalculatorActivity::class.java)
         }
+
         fun fa(): Activity? {
             return getFa()
         }

@@ -31,7 +31,7 @@ class BMIResultModel @Inject constructor(private val bmiDAO: BmiDAO) {
         return bmi
     }
 
-    fun isSaved():Boolean{
+    fun isSaved(): Boolean {
         return isSaved
     }
 
@@ -73,9 +73,11 @@ class BMIResultModel @Inject constructor(private val bmiDAO: BmiDAO) {
 
     fun shareData(context: Context) {
         val shareBody =
-            context.resources.getString(R.string.your_bmi_result) + bmi + "\n" + context.resources.getString(R.string.Result) + " " +
+            context.resources.getString(R.string.your_bmi_result) + bmi + "\n" + context.resources.getString(
+                R.string.Result
+            ) + " " +
                     setDescription(context)
-        context.share(shareBody,context.resources.getString(R.string.share_main))
+        context.share(shareBody, context.resources.getString(R.string.share_main))
     }
 
     private fun setDataInDB() {

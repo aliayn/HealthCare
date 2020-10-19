@@ -25,7 +25,9 @@ class MainModel @Inject constructor(private val sharePrefManager: SharePrefManag
             MaterialTapTargetPrompt.Builder(context1 as Activity)
                 .setTarget(R.id.relative_main_height)
                 .setPrimaryText(context1.getResources().getString(R.string.txt_main_height_cal))
-                .setSecondaryText(context1.getResources().getString(R.string.txt_main_height_cal_detail))
+                .setSecondaryText(
+                    context1.getResources().getString(R.string.txt_main_height_cal_detail)
+                )
                 .setIconDrawable(context1.getResources().getDrawable(R.drawable.ic_height))
                 .setPromptStateChangeListener { _, state ->
                     if (state == MaterialTapTargetPrompt.STATE_FOCAL_PRESSED || state == MaterialTapTargetPrompt.STATE_DISMISSING) {
@@ -73,16 +75,17 @@ class MainModel @Inject constructor(private val sharePrefManager: SharePrefManag
         } else {
             isBackPressed = true
             Handler().postDelayed({ isBackPressed = false }, 1000)
-            Toast.makeText(context, context.resources.getString(R.string.exit), Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, context.resources.getString(R.string.exit), Toast.LENGTH_SHORT)
+                .show()
         }
     }
 
     fun heightActivity(context: Context) {
-       HeightCalculatorActivity.start(context)
+        HeightCalculatorActivity.start(context)
     }
 
     fun bmiActivity(context: Context) {
-       BMICalculatorActivity.start(context)
+        BMICalculatorActivity.start(context)
     }
 
     fun bmiSavedActivity(context: Context) {

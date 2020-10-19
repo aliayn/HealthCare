@@ -1,9 +1,9 @@
 package com.ali.ayn.healthcare.base
 
-import android.support.v7.widget.RecyclerView
 import android.view.View
+import androidx.recyclerview.widget.RecyclerView
 
-open class BaseHolder<P : BasePresenter<*,*>>(itemView: View) : RecyclerView.ViewHolder(itemView) {
+open class BaseHolder<P : BasePresenter<*, *>>(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     private var presenter: P? = null
 

@@ -2,8 +2,8 @@ package com.ali.ayn.healthcare.activity.splash
 
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.app.AppCompatActivity
 import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
 import com.ali.ayn.healthcare.BuildConfig
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.activity.main.MainActivity
@@ -22,7 +22,8 @@ class SplashActivity : AppCompatActivity() {
             this,
             R.anim.splash_txt_version
         )
-        txt_splash_version.text = String.format("%s %s", resources.getString(R.string.version), BuildConfig.VERSION_NAME)
+        txt_splash_version.text =
+            String.format("%s %s", resources.getString(R.string.version), BuildConfig.VERSION_NAME)
         txt_splash_version.animation = animation
         next()
     }

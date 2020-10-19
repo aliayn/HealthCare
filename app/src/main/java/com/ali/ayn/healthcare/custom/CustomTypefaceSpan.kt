@@ -2,9 +2,9 @@ package com.ali.ayn.healthcare.custom
 
 import android.graphics.Paint
 import android.graphics.Typeface
-import android.support.annotation.NonNull
 import android.text.TextPaint
 import android.text.style.TypefaceSpan
+import androidx.annotation.NonNull
 
 class CustomTypefaceSpan(family: String?, private val type: Typeface) : TypefaceSpan(family) {
 

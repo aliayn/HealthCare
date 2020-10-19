@@ -6,7 +6,8 @@ import com.ali.ayn.healthcare.base.BaseView
 import kotlinx.android.synthetic.main.activity_height_calculator.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
-class HeightCalculatorView(context: Context) : BaseView(context, R.layout.activity_height_calculator) {
+class HeightCalculatorView(context: Context) :
+    BaseView(context, R.layout.activity_height_calculator) {
 
     fun calHeight(presenter: HeightCalculatorPresenter) {
         btn_height_result.onClick {

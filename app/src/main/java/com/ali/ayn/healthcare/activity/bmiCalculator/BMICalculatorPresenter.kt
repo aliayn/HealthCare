@@ -5,7 +5,8 @@ import android.widget.TextView
 import com.ali.ayn.healthcare.base.BasePresenter
 import javax.inject.Inject
 
-class BMICalculatorPresenter @Inject constructor (model: BMICalculatorModel?) : BasePresenter<BMICalculatorView, BMICalculatorModel>(model) {
+class BMICalculatorPresenter @Inject constructor(model: BMICalculatorModel?) :
+    BasePresenter<BMICalculatorView, BMICalculatorModel>(model) {
 
     override fun start() {
         view.calculate(this)
@@ -33,7 +34,7 @@ class BMICalculatorPresenter @Inject constructor (model: BMICalculatorModel?) : 
         model.cal(isFemale, height, weight, context)
     }
 
-    fun finish(){
+    fun finish() {
         model.finish()
     }
 }

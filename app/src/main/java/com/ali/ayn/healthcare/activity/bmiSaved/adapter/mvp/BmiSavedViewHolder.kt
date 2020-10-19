@@ -14,16 +14,18 @@ import java.util.*
 
 class BmiSavedViewHolder(itemView: View) : BaseHolder<BmiSavedAdapterPresenter>(itemView) {
 
-    private val imageView: ImageView = itemView.findViewById(R.id.img_bmi_saved_recycler) as ImageView
-    private val txtResult: TextView = itemView.findViewById(R.id.txt_bmi_result_recycler) as TextView
+    private val imageView: ImageView =
+        itemView.findViewById(R.id.img_bmi_saved_recycler) as ImageView
+    private val txtResult: TextView =
+        itemView.findViewById(R.id.txt_bmi_result_recycler) as TextView
     private val txtBmi: TextView = itemView.findViewById(R.id.txt_bmi_saved_recycler) as TextView
     private val txtDate: TextView = itemView.findViewById(R.id.txt_bmi_time_recycler) as TextView
 
     fun setData(model: BmiSavedAdapterModel, itemClickListener: ItemClickListener?) {
         itemView.onClick { itemClickListener?.onItemClick(adapterPosition) }
         txtDate.text = getDate(model.time)
-        txtResult.text = setDescription(model.bmi, model.isMale,itemView.context)
-        txtResult.setTextColor(getColor(model.bmi,itemView.context))
+        txtResult.text = setDescription(model.bmi, model.isMale, itemView.context)
+        txtResult.setTextColor(getColor(model.bmi, itemView.context))
         txtBmi.text = model.bmi.toString()
         if (!model.isMale) {
             imageView.imageResource = R.drawable.ic_woman

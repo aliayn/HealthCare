@@ -10,38 +10,45 @@ import org.jetbrains.anko.sdk27.coroutines.onClick
 class BMICalculatorView(context: Context) : BaseView(context, R.layout.activity_bmi_calculator) {
 
     fun calculate(presenter: BMICalculatorPresenter) {
-        btn_bmi_cal.onClick { presenter.calculateBMI(
-            toggle_gender.isChecked,
-            seekbar_height.progress,
-            seekbar_weight.progress,
-            context
-        ) }
+        btn_bmi_cal.onClick {
+            presenter.calculateBMI(
+                toggle_gender.isChecked,
+                seekbar_height.progress,
+                seekbar_weight.progress,
+                context
+            )
+        }
     }
 
     fun initView(presenter: BMICalculatorPresenter) {
-        seekbar_height.onProgressChangedListener = object : BubbleSeekBar.OnProgressChangedListener {
-            override fun onProgressChanged(
-                bubbleSeekBar: BubbleSeekBar,
-                progress: Int,
-                progressFloat: Float,
-                fromUser: Boolean
-            ) {
-                presenter.setHeight(txt_bmi_height, progress, context)
+        seekbar_height.onProgressChangedListener =
+            object : BubbleSeekBar.OnProgressChangedListener {
+                override fun onProgressChanged(
+                    bubbleSeekBar: BubbleSeekBar,
+                    progress: Int,
+                    progressFloat: Float,
+                    fromUser: Boolean
+                ) {
+                    presenter.setHeight(txt_bmi_height, progress, context)
+                }
+
+                override fun getProgressOnActionUp(
+                    bubbleSeekBar: BubbleSeekBar,
+                    progress: Int,
+                    progressFloat: Float
+                ) {
+
+                }
+
+                override fun getProgressOnFinally(
+                    bubbleSeekBar: BubbleSeekBar,
+                    progress: Int,
+                    progressFloat: Float,
+                    fromUser: Boolean
+                ) {
+
+                }
             }
-
-            override fun getProgressOnActionUp(bubbleSeekBar: BubbleSeekBar, progress: Int, progressFloat: Float) {
-
-            }
-
-            override fun getProgressOnFinally(
-                bubbleSeekBar: BubbleSeekBar,
-                progress: Int,
-                progressFloat: Float,
-                fromUser: Boolean
-            ) {
-
-            }
-        }
         seekbar_age.onProgressChangedListener = object : BubbleSeekBar.OnProgressChangedListener {
             override fun onProgressChanged(
                 bubbleSeekBar: BubbleSeekBar,
@@ -52,7 +59,11 @@ class BMICalculatorView(context: Context) : BaseView(context, R.layout.activity_
                 presenter.setAge(txt_bmi_age, progress, context)
             }
 
-            override fun getProgressOnActionUp(bubbleSeekBar: BubbleSeekBar, progress: Int, progressFloat: Float) {
+            override fun getProgressOnActionUp(
+                bubbleSeekBar: BubbleSeekBar,
+                progress: Int,
+                progressFloat: Float
+            ) {
 
             }
 
@@ -65,29 +76,34 @@ class BMICalculatorView(context: Context) : BaseView(context, R.layout.activity_
 
             }
         }
-        seekbar_weight.onProgressChangedListener = object : BubbleSeekBar.OnProgressChangedListener {
-            override fun onProgressChanged(
-                bubbleSeekBar: BubbleSeekBar,
-                progress: Int,
-                progressFloat: Float,
-                fromUser: Boolean
-            ) {
-                presenter.setWeight(txt_bmi_weight, progress, context)
+        seekbar_weight.onProgressChangedListener =
+            object : BubbleSeekBar.OnProgressChangedListener {
+                override fun onProgressChanged(
+                    bubbleSeekBar: BubbleSeekBar,
+                    progress: Int,
+                    progressFloat: Float,
+                    fromUser: Boolean
+                ) {
+                    presenter.setWeight(txt_bmi_weight, progress, context)
+                }
+
+                override fun getProgressOnActionUp(
+                    bubbleSeekBar: BubbleSeekBar,
+                    progress: Int,
+                    progressFloat: Float
+                ) {
+
+                }
+
+                override fun getProgressOnFinally(
+                    bubbleSeekBar: BubbleSeekBar,
+                    progress: Int,
+                    progressFloat: Float,
+                    fromUser: Boolean
+                ) {
+
+                }
             }
-
-            override fun getProgressOnActionUp(bubbleSeekBar: BubbleSeekBar, progress: Int, progressFloat: Float) {
-
-            }
-
-            override fun getProgressOnFinally(
-                bubbleSeekBar: BubbleSeekBar,
-                progress: Int,
-                progressFloat: Float,
-                fromUser: Boolean
-            ) {
-
-            }
-        }
     }
 
     fun finish(presenter: BMICalculatorPresenter) {

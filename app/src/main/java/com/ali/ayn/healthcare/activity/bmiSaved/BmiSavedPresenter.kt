@@ -4,10 +4,11 @@ import android.content.Context
 import com.ali.ayn.healthcare.activity.bmiSaved.adapter.BmiSavedAdapter
 import com.ali.ayn.healthcare.base.BasePresenter
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
-import java.util.ArrayList
+import java.util.*
 import javax.inject.Inject
 
-class BmiSavedPresenter @Inject constructor(model: BmiSavedModel?) : BasePresenter<BmiSavedView, BmiSavedModel>(model) {
+class BmiSavedPresenter @Inject constructor(model: BmiSavedModel?) :
+    BasePresenter<BmiSavedView, BmiSavedModel>(model) {
 
     override fun start() {
         view.finish(this)

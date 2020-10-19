@@ -6,7 +6,8 @@ import android.widget.RelativeLayout
 import com.ali.ayn.healthcare.base.BasePresenter
 import javax.inject.Inject
 
-class MainPresenter @Inject constructor(model: MainModel?) : BasePresenter<MainView, MainModel>(model) {
+class MainPresenter @Inject constructor(model: MainModel?) :
+    BasePresenter<MainView, MainModel>(model) {
 
     override fun start() {
         view.initViews(this)
@@ -17,7 +18,12 @@ class MainPresenter @Inject constructor(model: MainModel?) : BasePresenter<MainV
 
     }
 
-    fun checkFirstLogin(height: RelativeLayout, bmi: RelativeLayout, menu: ImageButton, activity: Context) {
+    fun checkFirstLogin(
+        height: RelativeLayout,
+        bmi: RelativeLayout,
+        menu: ImageButton,
+        activity: Context
+    ) {
         model.checkFirstLogin(height, bmi, menu, activity)
     }
 

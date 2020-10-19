@@ -2,9 +2,10 @@ package com.ali.ayn.healthcare.activity.bmiSaved.adapter
 
 import com.ali.ayn.healthcare.base.BaseHolder
 import com.ali.ayn.healthcare.base.BasePresenter
-import java.util.ArrayList
+import java.util.*
 
-abstract class RecyclerViewList<M, P : BasePresenter<VH, M>, VH : BaseHolder<P>> : RecyclerViewAdapter<M, P, VH>() {
+abstract class RecyclerViewList<M, P : BasePresenter<VH, M>, VH : BaseHolder<P>> :
+    RecyclerViewAdapter<M, P, VH>() {
 
     var list: MutableList<M> = ArrayList()
 

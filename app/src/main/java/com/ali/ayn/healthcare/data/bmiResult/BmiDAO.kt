@@ -5,18 +5,22 @@ import javax.inject.Inject
 
 class BmiDAO @Inject constructor() {
 
-     fun save(dataModel: BmiData) {
+    fun save(dataModel: BmiData) {
         val model = BmiData(dataModel.time, dataModel.bmi, dataModel.isMale)
         model.save()
     }
 
-     fun deleteByTime(time: Long) {
+    fun deleteByTime(time: Long) {
         val models =
-            SugarRecord.findWithQuery(BmiData::class.java, "Select * from BmiData where time = ?", time.toString())
+            SugarRecord.findWithQuery(
+                BmiData::class.java,
+                "Select * from BmiData where time = ?",
+                time.toString()
+            )
         models[0]?.delete()
     }
 
-     fun findAll(): List<BmiData> {
+    fun findAll(): List<BmiData> {
         return SugarRecord.listAll(BmiData::class.java)
     }
 

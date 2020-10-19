@@ -1,158 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bmi_background"
+    android:layoutDirection="ltr">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layoutDirection="ltr"
         android:layout_height="match_parent"
-        android:background="@color/bmi_background">
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
 
-    <android.support.v4.widget.DrawerLayout
-            android:id="@+id/drawer_layout"
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            tools:openDrawer="start">
+            android:layout_height="match_parent">
 
-        <android.support.design.widget.CoordinatorLayout
+            <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-            <android.support.design.widget.AppBarLayout
+                <androidx.appcompat.widget.Toolbar
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-                <android.support.v7.widget.Toolbar
-                        android:layout_width="match_parent"
-                        android:layout_height="?attr/actionBarSize"
-                        android:background="?attr/colorPrimary">
+                    android:background="?attr/colorPrimary">
 
                     <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
                         <ImageButton
-                                android:id="@+id/btn_navigation"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
-                                android:layout_centerVertical="true"
-                                android:adjustViewBounds="true"
-                                android:background="@color/colorPrimary"
-                                android:scaleType="fitXY"
-                                app:srcCompat="@drawable/ic_dehaze_black_24dp"/>
+                            android:id="@+id/btn_navigation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:adjustViewBounds="true"
+                            android:background="@color/colorPrimary"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/ic_dehaze_black_24dp" />
 
                     </RelativeLayout>
 
-                </android.support.v7.widget.Toolbar>
+                </androidx.appcompat.widget.Toolbar>
 
-            </android.support.design.widget.AppBarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
 
             <RelativeLayout
-                    android:layout_gravity="bottom"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:clickable="true"
+                android:focusable="true" />
 
             <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/standard_margin"
-                    android:layout_marginTop="?attr/actionBarSize"
-                    android:clipToPadding="false"
-                    android:orientation="horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
 
                 <RelativeLayout
-                        android:id="@+id/relative_main_height"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/standard_margin"
-                        android:layout_marginEnd="@dimen/standard_margin"
-                        android:layout_weight="1"
-                        android:background="@drawable/main_item_background"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:padding="@dimen/standard_margin_x">
+                    android:id="@+id/relative_main_height"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginEnd="@dimen/standard_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/main_item_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/standard_margin_x">
 
                     <ImageView
-                            android:id="@+id/img_main_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            app:srcCompat="@drawable/ic_height"/>
+                        android:id="@+id/img_main_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/ic_height" />
 
                     <TextView
-                            style="@style/LightFont16"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/img_main_1"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="@dimen/standard_margin_x"
-                            android:text="@string/txt_main_height_cal"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"/>
+                        style="@style/LightFont16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_main_1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/standard_margin_x"
+                        android:text="@string/txt_main_height_cal"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
 
                 <RelativeLayout
-                        android:id="@+id/relative_main_bmi"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/standard_margin"
-                        android:layout_marginEnd="@dimen/standard_margin"
-                        android:layout_weight="1"
-                        android:background="@drawable/main_item_background"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:padding="@dimen/standard_margin_x">
+                    android:id="@+id/relative_main_bmi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginEnd="@dimen/standard_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/main_item_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="@dimen/standard_margin_x">
 
                     <ImageView
-                            android:id="@+id/img_main_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true"
-                            app:srcCompat="@drawable/ic_weight"/>
+                        android:id="@+id/img_main_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        app:srcCompat="@drawable/ic_weight" />
 
                     <TextView
-                            style="@style/LightFont16"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/img_main_2"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="@dimen/standard_margin_x"
-                            android:text="@string/txt_main_bmi_cal"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"/>
+                        style="@style/LightFont16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_main_2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/standard_margin_x"
+                        android:text="@string/txt_main_bmi_cal"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
 
             </LinearLayout>
 
-        </android.support.design.widget.CoordinatorLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-        <android.support.design.widget.NavigationView
-                android:id="@+id/nav_view"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="start"
-                android:background="@color/white"
-                android:fitsSystemWindows="true"
-                android:overScrollMode="always"
-                app:headerLayout="@layout/layout_navigation_header"
-                app:itemIconTint="@color/black"
-                app:itemTextColor="@color/black"
-                app:menu="@menu/navigation_menu">
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:overScrollMode="always"
+            app:headerLayout="@layout/layout_navigation_header"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            app:menu="@menu/navigation_menu">
 
 
-        </android.support.design.widget.NavigationView>
+        </com.google.android.material.navigation.NavigationView>
 
-    </android.support.v4.widget.DrawerLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

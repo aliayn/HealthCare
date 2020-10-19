@@ -39,7 +39,7 @@ class BMICalculatorModel @Inject constructor() {
     }
 
     fun finish() {
-       BMICalculatorActivity.fa()?.finish()
+        BMICalculatorActivity.fa()?.finish()
     }
 
 }

@@ -4,14 +4,14 @@ import java.lang.ref.WeakReference
 
 abstract class BasePresenterK<V, M> constructor(model: M) {
 
-    private var model : M? = null
+    private var model: M? = null
     private var view: WeakReference<V>? = null
 
     init {
         setModel(model)
     }
 
-    private fun setModel(model: M){
+    private fun setModel(model: M) {
         this.model = model
         if (setup())
             start()
@@ -29,11 +29,11 @@ abstract class BasePresenterK<V, M> constructor(model: M) {
         System.gc()
     }
 
-    fun getView() : V{
-         return if (view == null){
+    fun getView(): V {
+        return if (view == null) {
             null!!
-        }else{
-             view!!.get()!!
+        } else {
+            view!!.get()!!
         }
     }
 

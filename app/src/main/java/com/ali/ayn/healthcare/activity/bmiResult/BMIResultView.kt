@@ -8,10 +8,10 @@ import org.jetbrains.anko.imageResource
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.textColor
 
-class BMIResultView(context: Context) : BaseView(context,R.layout.activity_bmi_result) {
+class BMIResultView(context: Context) : BaseView(context, R.layout.activity_bmi_result) {
 
-    fun isSaved(presenter: BMIResultPresenter){
-        if (presenter.isSaved()){
+    fun isSaved(presenter: BMIResultPresenter) {
+        if (presenter.isSaved()) {
             btn_save_result.imageResource = R.drawable.ic_turned_in_48px
         }
     }

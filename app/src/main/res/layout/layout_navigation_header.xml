@@ -36,16 +36,16 @@
                 fresco:srcCompat="@mipmap/icon_app" />
 
             <TextView
-                    style="@style/LightFont18"
-                    android:layout_width="match_parent"
-                    android:layout_toEndOf="@+id/navigation_header_image"
-                    android:textAlignment="viewStart"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="@dimen/standard_margin"
-                    android:clickable="false"
-                    android:layout_centerInParent="true"
-                    android:text="@string/app_name"
-                    android:textColor="@color/white" />
+                style="@style/LightFont18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/navigation_header_image"
+                android:clickable="false"
+                android:paddingStart="@dimen/standard_margin"
+                android:text="@string/app_name"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white" />
 
 
         </RelativeLayout>

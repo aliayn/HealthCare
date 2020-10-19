@@ -13,7 +13,8 @@ class SharePrefManager @Inject constructor(private val context: Context) {
     private var sharedPreferencesLogin: SharedPreferences
 
     init {
-        sharedPreferencesLogin = context.getSharedPreferences(USER_LOGGED_SHARED_PREF_LOGIN, MODE_PRIVATE)
+        sharedPreferencesLogin =
+            context.getSharedPreferences(USER_LOGGED_SHARED_PREF_LOGIN, MODE_PRIVATE)
     }
 
     fun setLogin(b: Boolean) {
@@ -23,7 +24,8 @@ class SharePrefManager @Inject constructor(private val context: Context) {
     }
 
     fun isLogin(): Boolean {
-        val sharedPrefManagerLogged = context.getSharedPreferences(USER_LOGGED_SHARED_PREF_LOGIN, MODE_PRIVATE)
+        val sharedPrefManagerLogged =
+            context.getSharedPreferences(USER_LOGGED_SHARED_PREF_LOGIN, MODE_PRIVATE)
         return sharedPrefManagerLogged.getBoolean(KEY_USER_LOGIN, false)
     }
 

@@ -15,7 +15,7 @@ import org.jetbrains.anko.sdk27.coroutines.onClick
 class MainView(context: Context) : BaseView(context, R.layout.activity_main) {
 
     fun initViews(presenter: MainPresenter) {
-        btn_navigation.onClick { drawer_layout.openDrawer(Gravity.START, true) }
+        btn_navigation.onClick { /*drawer_layout.openDrawer(Gravity.START, true)*/ }
         relative_main_height.onClick { presenter.heightActivity(context) }
         relative_main_bmi.onClick { presenter.bmiActivity(context) }
         nav_view.setNavigationItemSelectedListener { menuItem ->
@@ -46,7 +46,12 @@ class MainView(context: Context) : BaseView(context, R.layout.activity_main) {
     private fun applyFontToMenuItem(mi: MenuItem) {
         val font = Typeface.createFromAsset(context.assets, "fonts/b_yekan.ttf")
         val mNewTitle = SpannableString(mi.title)
-        mNewTitle.setSpan(CustomTypefaceSpan("", font), 0, mNewTitle.length, Spannable.SPAN_INCLUSIVE_INCLUSIVE)
+        mNewTitle.setSpan(
+            CustomTypefaceSpan("", font),
+            0,
+            mNewTitle.length,
+            Spannable.SPAN_INCLUSIVE_INCLUSIVE
+        )
         mi.title = mNewTitle
     }
 

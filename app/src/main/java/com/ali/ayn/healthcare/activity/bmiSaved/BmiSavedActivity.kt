@@ -2,8 +2,8 @@ package com.ali.ayn.healthcare.activity.bmiSaved
 
 import android.app.Activity
 import android.content.Context
-import com.ali.ayn.healthcare.base.BaseActivity
 import com.ali.ayn.healthcare.App
+import com.ali.ayn.healthcare.base.BaseActivity
 
 class BmiSavedActivity : BaseActivity<BmiSavedView, BmiSavedPresenter>() {
 
@@ -17,10 +17,11 @@ class BmiSavedActivity : BaseActivity<BmiSavedView, BmiSavedPresenter>() {
     override val activity: Activity
         get() = this
 
-    companion object{
+    companion object {
         fun start(context: Context) {
             start(context, BmiSavedActivity::class.java)
         }
+
         fun fa(): Activity? {
             return getFa()
         }

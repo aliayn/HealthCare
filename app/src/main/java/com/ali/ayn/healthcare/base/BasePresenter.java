@@ -11,13 +11,6 @@ public abstract class BasePresenter<V, M> {
         setModel(model);
     }
 
-    private void setModel(M model) {
-        this.model = model;
-        if (setup()) {
-            start();
-        }
-    }
-
     private void bindView(V view) {
         this.view = new WeakReference<>(view);
         if (setup()) {
@@ -39,15 +32,22 @@ public abstract class BasePresenter<V, M> {
 
     }
 
-    public M getModel(){
+    public M getModel() {
         return model;
     }
 
-    public void onCreate(V view){
+    private void setModel(M model) {
+        this.model = model;
+        if (setup()) {
+            start();
+        }
+    }
+
+    public void onCreate(V view) {
         bindView(view);
     }
 
-    public void onDestroyed(){
+    public void onDestroyed() {
         unBindView();
     }
 

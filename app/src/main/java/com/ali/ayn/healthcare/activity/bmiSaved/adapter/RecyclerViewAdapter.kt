@@ -1,14 +1,14 @@
 package com.ali.ayn.healthcare.activity.bmiSaved.adapter
 
-import android.support.v7.widget.RecyclerView
-import com.ali.ayn.healthcare.activity.bmiSaved.adapter.ItemClickListener
+import androidx.recyclerview.widget.RecyclerView
 import com.ali.ayn.healthcare.activity.bmiSaved.adapter.mvp.BmiSavedAdapterModel
 import com.ali.ayn.healthcare.activity.bmiSaved.adapter.mvp.BmiSavedViewHolder
 import com.ali.ayn.healthcare.base.BaseHolder
 import com.ali.ayn.healthcare.base.BasePresenter
-import java.util.HashMap
+import java.util.*
 
-abstract class RecyclerViewAdapter<M, P : BasePresenter<VH, M>, VH : BaseHolder<P>> : RecyclerView.Adapter<VH>() {
+abstract class RecyclerViewAdapter<M, P : BasePresenter<VH, M>, VH : BaseHolder<P>> :
+    RecyclerView.Adapter<VH>() {
 
     var presenter: Map<Any, P>? = null
     var itemClickListener: ItemClickListener? = null

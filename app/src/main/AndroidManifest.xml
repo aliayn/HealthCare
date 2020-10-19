@@ -1,56 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="com.ali.ayn.healthcare">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ali.ayn.healthcare">
 
     <application
-            android:name=".App"
-            android:allowBackup="true"
-            android:label="@string/app_name"
-            android:icon="@mipmap/icon_app"
-            android:supportsRtl="true"
-            android:roundIcon="@mipmap/icon_app"
-            android:theme="@style/AppTheme"
-            tools:ignore="GoogleAppIndexingWarning">
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_app"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_app"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
 
-        <meta-data android:name="DATABASE" android:value="healthcare.db"/>
-        <meta-data android:name="VERSION" android:value="3"/>
-        <meta-data android:name="QUERY_LOG" android:value="true"/>
+        <meta-data
+            android:name="DATABASE"
+            android:value="healthcare.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="3" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
 
-        <activity android:name=".activity.splash.SplashActivity"
-                  android:screenOrientation="portrait"
-                  android:launchMode="singleTop"
-                  android:theme="@style/splashTheme">
+        <activity
+            android:name=".activity.splash.SplashActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/splashTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.main.MainActivity"
-                  android:screenOrientation="portrait"
-                  android:launchMode="singleTop"/>
+        <activity
+            android:name=".activity.main.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".activity.bmiCalculator.BMICalculatorActivity"
-                  android:screenOrientation="portrait"
-                  android:launchMode="singleTop"/>
+        <activity
+            android:name=".activity.bmiCalculator.BMICalculatorActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".activity.bmiResult.BMIResultActivity"
-                  android:screenOrientation="portrait"
-                  android:launchMode="singleTop"/>
+        <activity
+            android:name=".activity.bmiResult.BMIResultActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".activity.heightCalculator.HeightCalculatorActivity"
-                  android:screenOrientation="portrait"
-                  android:launchMode="singleTop"/>
+        <activity
+            android:name=".activity.heightCalculator.HeightCalculatorActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".activity.heightResult.HeightResultActivity"
-                  android:screenOrientation="portrait"
-                  android:launchMode="singleTop"/>
+        <activity
+            android:name=".activity.heightResult.HeightResultActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
 
-        <activity android:name=".activity.bmiSaved.BmiSavedActivity"
-                  android:screenOrientation="portrait"
-                  android:launchMode="singleTop"/>
+        <activity
+            android:name=".activity.bmiSaved.BmiSavedActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
 
 
     </application>

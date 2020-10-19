@@ -6,7 +6,8 @@ import android.widget.ImageButton
 import com.ali.ayn.healthcare.base.BasePresenter
 import javax.inject.Inject
 
-class BMIResultPresenter @Inject constructor(model: BMIResultModel?) : BasePresenter<BMIResultView, BMIResultModel>(model) {
+class BMIResultPresenter @Inject constructor(model: BMIResultModel?) :
+    BasePresenter<BMIResultView, BMIResultModel>(model) {
 
     fun setData(intent: Intent) {
         model.setData(intent)
@@ -32,7 +33,7 @@ class BMIResultPresenter @Inject constructor(model: BMIResultModel?) : BasePrese
         model.shareData(context)
     }
 
-    fun isSaved():Boolean{
+    fun isSaved(): Boolean {
         return model.isSaved()
     }
 
