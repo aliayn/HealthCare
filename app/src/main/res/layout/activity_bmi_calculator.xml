@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layoutDirection="rtl"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageButton
+                android:id="@+id/btn_back_bmi_cal"
+                style="@style/BackButton"
+                app:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/bmi_background">
+
+        <com.rm.rmswitch.RMSwitch
+            android:id="@+id/toggle_gender"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/standard_margin_x2"
+            app:checked="false"
+            app:forceAspectRatio="false"
+            app:switchBkgCheckedColor="@color/colorPrimary"
+            app:switchBkgNotCheckedColor="@color/blue"
+            app:switchDesign="slim"
+            app:switchToggleCheckedColor="@color/colorPrimary"
+            app:switchToggleCheckedImage="@drawable/ic_gender_female"
+            app:switchToggleNotCheckedColor="@color/blue"
+            app:switchToggleNotCheckedImage="@drawable/ic_gender_male" />
+
+        <RelativeLayout
+            android:id="@+id/relative_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toggle_gender"
+            android:layout_alignStart="@+id/toggle_gender"
+            android:layout_alignEnd="@+id/toggle_gender"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_marginBottom="25dp"
+            android:layoutDirection="rtl">
+
+            <TextView
+                style="@style/LightFont16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/Female"
+                android:textColor="@color/text_gray" />
+
+            <TextView
+                style="@style/LightFont16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/Male"
+                android:textColor="@color/text_gray" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_bmi_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relative_age"
+            android:layout_marginStart="@dimen/standard_margin_x2"
+            android:text="@string/txt_bmi_age"
+            android:textColor="@color/text_pink"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/relative_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_1"
+            android:layout_margin="@dimen/standard_margin_x"
+            android:background="@drawable/seekbar_background"
+            android:padding="@dimen/standard_margin_x">
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/seekbar_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:bsb_bubble_color="@color/colorPrimary"
+                app:bsb_bubble_text_color="@color/colorPrimaryDark"
+                app:bsb_max="100"
+                app:bsb_min="7"
+                app:bsb_progress="25"
+                app:bsb_second_track_color="@color/colorPrimary"
+                app:bsb_section_count="7"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_show_progress_in_float="true"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_track_color="@color/darkGray" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_bmi_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relative_height"
+            android:layout_marginStart="@dimen/standard_margin_x2"
+            android:text="@string/txt_bmi_height"
+            android:textColor="@color/text_pink"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/relative_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/standard_margin_x"
+            android:background="@drawable/seekbar_background"
+            android:padding="@dimen/standard_margin_x">
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/seekbar_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:bsb_bubble_color="@color/colorPrimary"
+                app:bsb_bubble_text_color="@color/colorPrimaryDark"
+                app:bsb_max="200"
+                app:bsb_min="130"
+                app:bsb_progress="150"
+                app:bsb_second_track_color="@color/colorPrimary"
+                app:bsb_section_count="7"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_show_progress_in_float="true"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_track_color="@color/darkGray" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/txt_bmi_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relative_weight"
+            android:layout_marginStart="@dimen/standard_margin_x2"
+            android:text="@string/txt_bmi_weight"
+            android:textColor="@color/text_pink"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/relative_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_bmi_cal"
+            android:layout_margin="@dimen/standard_margin_x"
+            android:background="@drawable/seekbar_background"
+            android:padding="@dimen/standard_margin_x">
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/seekbar_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bsb_bubble_color="@color/colorPrimary"
+                app:bsb_bubble_text_color="@color/colorPrimaryDark"
+                app:bsb_max="150"
+                app:bsb_min="20"
+                app:bsb_progress="70"
+                app:bsb_second_track_color="@color/colorPrimary"
+                app:bsb_section_count="7"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_show_progress_in_float="true"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_track_color="@color/darkGray" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_bmi_cal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="@dimen/standard_margin_x2"
+            android:background="@drawable/calculate_button_background"
+            android:text="@string/calculate"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            style="@style/LightFont20"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

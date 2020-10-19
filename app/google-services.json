@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "355126604393",
+    "firebase_url": "https://pmsit95.firebaseio.com",
+    "project_id": "pmsit95",
+    "storage_bucket": "pmsit95.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355126604393:android:59772253b3a8c9e9",
+        "android_client_info": {
+          "package_name": "com.ali.ayn.healthcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355126604393-kudu1jl3fpj2pmtqgl99rta8q853cvo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqsveI2xnsdgf9Dnt6KaBdlYrzaqI9cRM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

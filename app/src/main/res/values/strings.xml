@@ -1,0 +1,59 @@
+<resources>
+
+    <string name="app_name">Health Care</string>
+
+    <string name="Female">Female</string>
+    <string name="Male">Male</string>
+    <string name="calculate">Compute</string>
+    <string name="Result">Result :</string>
+    <string name="Very_Severely_Underweight">Lack of weight is very severe</string>
+    <string name="Severely_Underweight">Lack of weight</string>
+    <string name="Underweight">Underweight</string>
+    <string name="Normal">Normal weight</string>
+    <string name="Overweight">Overweight</string>
+    <string name="Obese_Class_1">Obesity type one</string>
+    <string name="Obese_Class_2">Obesity Type Two</string>
+    <string name="Obese_Class_3">Obesity Type Three</string>
+    <string name="your_child_Adulthood_height">The height of your child\'s adulthood</string>
+    <string name="boy">Boy</string>
+    <string name="girl">Girl</string>
+    <string name="father_height">Father\'s height</string>
+    <string name="mother_height">Mother\'s height</string>
+    <string name="your_Childs_Adulthood_height">The height of your child\'s adulthood (with a difference of 5 centimeters)</string>
+    <string name="cm">centimeter</string>
+    <string name="bmi_saved_navigation">BMI Records</string>
+    <string name="bmi">Body Mass Index (BMI):</string>
+    <string name="txt_bmi_saved">You do not have any saved records</string>
+    <string name="txt_bmi_age">Age: 25 years</string>
+    <string name="txt_bmi_height">Height : 150 centimeter</string>
+    <string name="txt_bmi_weight">Weight : 70 kg</string>
+    <string name="month1" >January</string>
+    <string name="month2" >February</string>
+    <string name="month3" >March</string>
+    <string name="month4" >April</string>
+    <string name="month5" >May</string>
+    <string name="month6" >June</string>
+    <string name="month7" >July</string>
+    <string name="month8" >August</string>
+    <string name="month9" >September</string>
+    <string name="month10" >October</string>
+    <string name="month11" >November</string>
+    <string name="month12" >December</string>
+    <string name="txt_list_bmi_saved">Records list:</string>
+    <string name="txt_main_height_cal">Calculate Height</string>
+    <string name="txt_main_height_cal_detail">Calculate the child\'s height by considering the height of the parent</string>
+    <string name="txt_main_bmi_cal">Calculate BMI</string>
+    <string name="txt_main_bmi_cal_detail">Calculate BMI by gender, age, height and weight</string>
+    <string name="height">Height :</string>
+    <string name="weight">Weight :</string>
+    <string name="age">Age :</string>
+    <string name="year">years</string>
+    <string name="kg">kg</string>
+    <string name="menu">Menu</string>
+    <string name="menu_detail">More app options</string>
+    <string name="version">Version </string>
+    <string name="exit">Press again to Exit</string>
+    <string name="share_main">Share Health Care App</string>
+    <string name="your_bmi_result">Your BMI :</string>
+
+</resources>

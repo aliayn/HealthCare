@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layoutDirection="ltr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_marginEnd="@dimen/standard_margin"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+
+        <ImageView
+                android:id="@+id/img_bmi_saved_recycler"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/standard_margin"
+                app:srcCompat="@drawable/ic_man"/>
+
+        <TextView
+                android:id="@+id/txt_bmi_saved_recycler_1"
+                style="@style/LightFont16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/standard_margin_x2"
+                android:layout_marginTop="@dimen/standard_margin_x2"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin_x2"
+                android:text="@string/bmi"
+                android:textColor="@color/text_gray"/>
+
+        <TextView
+                android:id="@+id/txt_bmi_saved_recycler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_margin_x2"
+                android:layout_toEndOf="@+id/txt_bmi_saved_recycler_1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:text="25"/>
+
+        <TextView
+                android:id="@+id/txt_bmi_saved_recycler_2"
+                style="@style/LightFont16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_bmi_saved_recycler_1"
+                android:layout_marginStart="@dimen/standard_margin_x2"
+                android:layout_marginEnd="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin_x2"
+                android:text="@string/Result"
+                android:textColor="@color/text_gray"/>
+
+        <TextView
+                android:id="@+id/txt_bmi_result_recycler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_bmi_saved_recycler_1"
+                android:layout_toEndOf="@+id/txt_bmi_saved_recycler_2"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:text="normal"/>
+
+        <TextView
+                android:id="@+id/txt_bmi_time_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/blue"
+                android:paddingTop="@dimen/standard_margin"
+                android:paddingEnd="@dimen/standard_margin"
+                android:paddingBottom="@dimen/standard_margin"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:text="1376/10/17 13:40:56"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

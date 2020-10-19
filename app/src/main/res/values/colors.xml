@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ec407a</color>
+    <color name="colorPrimaryDark">#b4004e</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="darkGray">#aeaeba</color>
+    <color name="green">#28a911</color>
+    <color name="red">#ef513c</color>
+    <color name="yellow">#ec900f</color>
+    <color name="blue">#76a5ee</color>
+
+    <color name="text_pink">#ff77a9</color>
+    <color name="text_gray">#818181</color>
+
+    <color name="bmi_background">#ededed</color>
+
+</resources>

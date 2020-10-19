@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layoutDirection="rtl">
+
+            <ImageButton
+                android:id="@+id/btn_back_bmi_result"
+                style="@style/BackButton"
+                app:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/relative_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:padding="20dp">
+
+            <me.itangqi.waveloadingview.WaveLoadingView
+                android:id="@+id/progress_circular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:wlv_borderColor="@color/colorAccent"
+                app:wlv_borderWidth="3dp"
+                app:wlv_progressValue="20"
+                app:wlv_round_rectangle="true"
+                app:wlv_shapeType="circle"
+                app:wlv_titleCenter="Center Title"
+                app:wlv_titleCenterColor="@android:color/white"
+                app:wlv_titleCenterSize="24sp"
+                app:wlv_titleCenterStrokeColor="@android:color/holo_blue_dark"
+                app:wlv_titleCenterStrokeWidth="3dp"
+                app:wlv_triangle_direction="north"
+                app:wlv_waveAmplitude="17"
+                app:wlv_waveColor="@color/colorAccent" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_bmi_result_2"
+            style="@style/LightFont22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/standard_margin"
+            android:text="@string/Result"
+            android:textColor="@color/text_pink" />
+
+        <TextView
+            android:id="@+id/txt_result_description"
+            style="@style/BoldFont22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_bmi_result_2"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/text_gray"
+            tools:text="@string/txt_main_bmi_cal" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/standard_margin_x2"
+            android:layout_centerHorizontal="true">
+
+            <ImageButton
+                android:id="@+id/btn_share_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/standard_margin_x2"
+                android:background="@drawable/btn_background"
+                app:srcCompat="@drawable/ic_share_48px" />
+
+            <ImageButton
+                android:id="@+id/btn_save_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/btn_share_result"
+                android:background="@drawable/btn_background"
+                app:srcCompat="@drawable/ic_turned_in_not_48px" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

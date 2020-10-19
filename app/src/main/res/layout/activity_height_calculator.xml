@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layoutDirection="rtl">
+
+            <ImageButton
+                android:id="@+id/btn_back_height_cal"
+                style="@style/BackButton"
+                app:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bmi_background"
+            android:orientation="vertical">
+
+            <com.rm.rmswitch.RMSwitch
+                android:id="@+id/toggle_gender"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/standard_margin_x2"
+                app:checked="false"
+                android:layoutDirection="rtl"
+                app:forceAspectRatio="false"
+                app:switchBkgCheckedColor="@color/colorPrimary"
+                app:switchBkgNotCheckedColor="@color/blue"
+                app:switchDesign="slim"
+                app:switchToggleCheckedColor="@color/colorPrimary"
+                app:switchToggleCheckedImage="@drawable/ic_gender_female"
+                app:switchToggleNotCheckedColor="@color/blue"
+                app:switchToggleNotCheckedImage="@drawable/ic_gender_male" />
+
+            <RelativeLayout
+                android:id="@+id/relative_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toggle_gender"
+                android:layout_alignStart="@+id/toggle_gender"
+                android:layout_alignEnd="@+id/toggle_gender"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginBottom="20dp"
+                android:layoutDirection="rtl">
+
+                <TextView
+                    style="@style/LightFont16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/girl"
+                    android:textColor="@color/text_gray" />
+
+                <TextView
+                    style="@style/LightFont16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/boy"
+                    android:textColor="@color/text_gray" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_height_father"
+                style="@style/LightFont16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_1"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/standard_margin_x2"
+                android:text="@string/father_height"
+                android:textColor="@color/text_pink" />
+
+            <RelativeLayout
+                android:id="@+id/relative_father"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_height_father"
+                android:layout_margin="@dimen/standard_margin_x"
+                android:background="@drawable/seekbar_background"
+                android:padding="@dimen/standard_margin_x">
+
+                <com.xw.repo.BubbleSeekBar
+                    android:id="@+id/seekbar_height_father"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:bsb_bubble_color="@color/colorPrimary"
+                    app:bsb_bubble_text_color="@color/colorPrimaryDark"
+                    app:bsb_max="200"
+                    app:bsb_min="130"
+                    app:bsb_progress="150"
+                    app:bsb_second_track_color="@color/colorPrimary"
+                    app:bsb_section_count="7"
+                    app:bsb_section_text_position="bottom_sides"
+                    app:bsb_show_progress_in_float="true"
+                    app:bsb_show_section_mark="true"
+                    app:bsb_show_section_text="true"
+                    app:bsb_show_thumb_text="true"
+                    app:bsb_track_color="@color/darkGray" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_height_mother"
+                style="@style/LightFont16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_father"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/standard_margin_x2"
+                android:text="@string/mother_height"
+                android:textColor="@color/text_pink" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_height_mother"
+                android:layout_margin="@dimen/standard_margin_x"
+                android:background="@drawable/seekbar_background"
+                android:padding="@dimen/standard_margin_x">
+
+                <com.xw.repo.BubbleSeekBar
+                    android:id="@+id/seekbar_height_mother"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:bsb_bubble_color="@color/colorPrimary"
+                    app:bsb_bubble_text_color="@color/colorPrimaryDark"
+                    app:bsb_max="200"
+                    app:bsb_min="130"
+                    app:bsb_progress="150"
+                    app:bsb_second_track_color="@color/colorPrimary"
+                    app:bsb_section_count="7"
+                    app:bsb_section_text_position="bottom_sides"
+                    app:bsb_show_progress_in_float="true"
+                    app:bsb_show_section_mark="true"
+                    app:bsb_show_section_text="true"
+                    app:bsb_show_thumb_text="true"
+                    app:bsb_track_color="@color/darkGray" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_height_result"
+                style="@style/LightFont20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/standard_margin_x2"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/calculate_button_background"
+                android:text="@string/calculate"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
