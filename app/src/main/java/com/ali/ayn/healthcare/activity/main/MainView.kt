@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.Typeface
 import android.text.Spannable
 import android.text.SpannableString
-import android.view.Gravity
 import android.view.MenuItem
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.base.BaseView
