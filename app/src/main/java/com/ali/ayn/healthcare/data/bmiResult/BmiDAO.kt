@@ -1,9 +1,8 @@
 package com.ali.ayn.healthcare.data.bmiResult
 
 import com.orm.SugarRecord
-import javax.inject.Inject
 
-class BmiDAO @Inject constructor() {
+class BmiDAO {
 
     fun save(dataModel: BmiData) {
         val model = BmiData(dataModel.time, dataModel.bmi, dataModel.isMale)

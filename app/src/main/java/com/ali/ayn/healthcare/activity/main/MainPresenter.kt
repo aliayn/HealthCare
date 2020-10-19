@@ -4,9 +4,8 @@ import android.content.Context
 import android.widget.ImageButton
 import android.widget.RelativeLayout
 import com.ali.ayn.healthcare.base.BasePresenter
-import javax.inject.Inject
 
-class MainPresenter @Inject constructor(model: MainModel?) :
+class MainPresenter constructor(model: MainModel?) :
     BasePresenter<MainView, MainModel>(model) {
 
     override fun start() {

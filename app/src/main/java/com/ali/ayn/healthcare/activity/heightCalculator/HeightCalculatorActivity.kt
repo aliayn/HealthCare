@@ -2,7 +2,6 @@ package com.ali.ayn.healthcare.activity.heightCalculator
 
 import android.app.Activity
 import android.content.Context
-import com.ali.ayn.healthcare.App.Companion.component
 import com.ali.ayn.healthcare.base.BaseActivity
 
 class HeightCalculatorActivity : BaseActivity<HeightCalculatorView, HeightCalculatorPresenter>() {
@@ -12,7 +11,7 @@ class HeightCalculatorActivity : BaseActivity<HeightCalculatorView, HeightCalcul
         get() = HeightCalculatorView(this)
 
     override fun setPresenter() {
-        component.inject(this)
+
     }
 
     override val activity: Activity

@@ -2,7 +2,6 @@ package com.ali.ayn.healthcare.activity.bmiCalculator
 
 import android.app.Activity
 import android.content.Context
-import com.ali.ayn.healthcare.App.Companion.component
 import com.ali.ayn.healthcare.base.BaseActivity
 
 class BMICalculatorActivity : BaseActivity<BMICalculatorView, BMICalculatorPresenter>() {
@@ -11,7 +10,7 @@ class BMICalculatorActivity : BaseActivity<BMICalculatorView, BMICalculatorPrese
         get() = BMICalculatorView(this)
 
     override fun setPresenter() {
-        component.inject(this)
+
     }
 
     override val activity: Activity

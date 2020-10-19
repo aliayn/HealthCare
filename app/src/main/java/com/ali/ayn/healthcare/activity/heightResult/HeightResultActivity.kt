@@ -2,7 +2,6 @@ package com.ali.ayn.healthcare.activity.heightResult
 
 import android.app.Activity
 import android.content.Context
-import com.ali.ayn.healthcare.App.Companion.component
 import com.ali.ayn.healthcare.base.BaseActivity
 
 open class HeightResultActivity : BaseActivity<HeightResultView, HeightResultPresenter>() {
@@ -11,8 +10,7 @@ open class HeightResultActivity : BaseActivity<HeightResultView, HeightResultPre
         get() = HeightResultView(this)
 
     override fun setPresenter() {
-        component.inject(this)
-        presenter.setIntent(intent)
+
     }
 
     override val activity: Activity

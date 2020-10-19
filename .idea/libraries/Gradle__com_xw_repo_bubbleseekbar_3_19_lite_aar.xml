@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.xw.repo:bubbleseekbar:3.19-lite@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/536204417fac9108a2126b21ce90988e/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bb7e6f4ab5bed5c0e86911e70446b20a/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/536204417fac9108a2126b21ce90988e/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/536204417fac9108a2126b21ce90988e/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/536204417fac9108a2126b21ce90988e/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bb7e6f4ab5bed5c0e86911e70446b20a/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bb7e6f4ab5bed5c0e86911e70446b20a/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bb7e6f4ab5bed5c0e86911e70446b20a/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

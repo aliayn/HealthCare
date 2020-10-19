@@ -10,5 +10,5 @@ class BMIRepository constructor(private val bmiDao: BMIDao) {
 
     suspend fun deleteByTime(time: Long) = bmiDao.deleteByTime(time)
 
-    suspend fun getAllBMIs(): LiveData<List<BMI>> = bmiDao.getAllBMIs()
+    fun getAllBMIs(): LiveData<List<BMI>> = bmiDao.getAllBMIs()
 }

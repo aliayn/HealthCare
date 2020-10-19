@@ -4,9 +4,8 @@ import android.content.Context
 import android.widget.TextView
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.activity.bmiResult.BMIResultActivity
-import javax.inject.Inject
 
-class BMICalculatorModel @Inject constructor() {
+class BMICalculatorModel constructor() {
 
     fun cal(isFemale: Boolean, height: Int, weight: Int, context: Context) {
         val bmi = weight / ((height / 100.0) * (height / 100.0))

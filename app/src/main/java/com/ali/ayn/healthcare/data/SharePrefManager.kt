@@ -3,9 +3,8 @@ package com.ali.ayn.healthcare.data
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
-import javax.inject.Inject
 
-class SharePrefManager @Inject constructor(private val context: Context) {
+class SharePrefManager constructor(private val context: Context) {
 
     private val USER_LOGGED_SHARED_PREF_LOGIN = "app_shared_pref_login"
     private val KEY_USER_LOGIN = "user_login"

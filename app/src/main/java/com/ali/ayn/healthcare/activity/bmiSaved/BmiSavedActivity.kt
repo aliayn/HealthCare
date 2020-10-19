@@ -11,7 +11,7 @@ class BmiSavedActivity : BaseActivity<BmiSavedView, BmiSavedPresenter>() {
         get() = BmiSavedView(this)
 
     override fun setPresenter() {
-        App.component.inject(this)
+
     }
 
     override val activity: Activity

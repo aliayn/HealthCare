@@ -3,9 +3,8 @@ package com.ali.ayn.healthcare.activity.bmiCalculator
 import android.content.Context
 import android.widget.TextView
 import com.ali.ayn.healthcare.base.BasePresenter
-import javax.inject.Inject
 
-class BMICalculatorPresenter @Inject constructor(model: BMICalculatorModel?) :
+class BMICalculatorPresenter constructor(model: BMICalculatorModel?) :
     BasePresenter<BMICalculatorView, BMICalculatorModel>(model) {
 
     override fun start() {

@@ -9,9 +9,8 @@ import com.ali.ayn.healthcare.data.bmiResult.BmiData
 import org.jetbrains.anko.imageResource
 import org.jetbrains.anko.share
 import java.util.*
-import javax.inject.Inject
 
-class BMIResultModel @Inject constructor(private val bmiDAO: BmiDAO) {
+class BMIResultModel constructor(private val bmiDAO: BmiDAO) {
 
     private var bmi: Int = 0
     private var isSaved: Boolean = false

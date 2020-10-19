@@ -4,9 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.widget.ImageButton
 import com.ali.ayn.healthcare.base.BasePresenter
-import javax.inject.Inject
 
-class BMIResultPresenter @Inject constructor(model: BMIResultModel?) :
+class BMIResultPresenter constructor(model: BMIResultModel?) :
     BasePresenter<BMIResultView, BMIResultModel>(model) {
 
     fun setData(intent: Intent) {

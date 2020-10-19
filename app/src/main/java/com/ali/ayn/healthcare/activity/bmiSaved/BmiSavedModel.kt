@@ -10,9 +10,8 @@ import com.ali.ayn.healthcare.mapper.BmiDataMapper
 import com.ali.ayn.healthcare.mapper.ChartDataMapper
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
 import java.util.*
-import javax.inject.Inject
 
-class BmiSavedModel @Inject constructor(
+class BmiSavedModel constructor(
     private val bmiDAO: BmiDAO,
     private val adapter: BmiSavedAdapter,
     private val context: Context

@@ -6,9 +6,8 @@ import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.activity.bmiSaved.adapter.mvp.BmiSavedAdapterModel
 import com.ali.ayn.healthcare.activity.bmiSaved.adapter.mvp.BmiSavedAdapterPresenter
 import com.ali.ayn.healthcare.activity.bmiSaved.adapter.mvp.BmiSavedViewHolder
-import javax.inject.Inject
 
-class BmiSavedAdapter @Inject constructor(private val mainAdapterPresenter: BmiSavedAdapterPresenter) :
+class BmiSavedAdapter constructor(private val mainAdapterPresenter: BmiSavedAdapterPresenter) :
     RecyclerViewList<BmiSavedAdapterModel, BmiSavedAdapterPresenter, BmiSavedViewHolder>() {
 
     override fun getModelId(model: BmiSavedAdapterModel): Any {

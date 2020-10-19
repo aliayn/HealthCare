@@ -2,7 +2,6 @@ package com.ali.ayn.healthcare.activity.bmiResult
 
 import android.app.Activity
 import android.content.Context
-import com.ali.ayn.healthcare.App.Companion.component
 import com.ali.ayn.healthcare.base.BaseActivity
 
 class BMIResultActivity : BaseActivity<BMIResultView, BMIResultPresenter>() {
@@ -11,8 +10,7 @@ class BMIResultActivity : BaseActivity<BMIResultView, BMIResultPresenter>() {
         get() = BMIResultView(this)
 
     override fun setPresenter() {
-        component.inject(this)
-        presenter.setData(intent)
+
     }
 
     override val activity: Activity

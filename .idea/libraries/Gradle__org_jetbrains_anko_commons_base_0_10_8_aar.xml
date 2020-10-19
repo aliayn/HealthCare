@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: org.jetbrains.anko:commons-base:0.10.8@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a8d8c4be397351d5234987e615fb50d/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a8d8c4be397351d5234987e615fb50d/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a8d8c4be397351d5234987e615fb50d/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e90cd1ac8011e65d5180f0b3602175df/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e90cd1ac8011e65d5180f0b3602175df/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e90cd1ac8011e65d5180f0b3602175df/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

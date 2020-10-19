@@ -2,9 +2,8 @@ package com.ali.ayn.healthcare.activity.heightCalculator
 
 import android.content.Context
 import com.ali.ayn.healthcare.base.BasePresenter
-import javax.inject.Inject
 
-class HeightCalculatorPresenter @Inject constructor(model: HeightCalculatorModel?) :
+class HeightCalculatorPresenter constructor(model: HeightCalculatorModel?) :
     BasePresenter<HeightCalculatorView, HeightCalculatorModel>(model) {
 
     override fun start() {

@@ -11,9 +11,8 @@ import com.ali.ayn.healthcare.activity.bmiSaved.BmiSavedActivity
 import com.ali.ayn.healthcare.activity.heightCalculator.HeightCalculatorActivity
 import com.ali.ayn.healthcare.data.SharePrefManager
 import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt
-import javax.inject.Inject
 
-class MainModel @Inject constructor(private val sharePrefManager: SharePrefManager) {
+class MainModel constructor(private val sharePrefManager: SharePrefManager) {
 
     private var isBackPressed: Boolean = false
 

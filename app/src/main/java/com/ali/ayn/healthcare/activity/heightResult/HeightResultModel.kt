@@ -9,9 +9,8 @@ import com.facebook.drawee.view.SimpleDraweeView
 import org.jetbrains.anko.imageResource
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.share
-import javax.inject.Inject
 
-class HeightResultModel @Inject constructor() {
+class HeightResultModel  {
 
     private var height: Double = 0.toDouble()
     private var isBoy: Boolean = false

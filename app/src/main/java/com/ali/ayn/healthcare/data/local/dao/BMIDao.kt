@@ -17,5 +17,5 @@ interface BMIDao {
     suspend fun deleteByTime(time: Long)
 
     @Query("SELECT * FROM bmi_records")
-    suspend fun getAllBMIs(): LiveData<List<BMI>>
+    fun getAllBMIs(): LiveData<List<BMI>>
 }

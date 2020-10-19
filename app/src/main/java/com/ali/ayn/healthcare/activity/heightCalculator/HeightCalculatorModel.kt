@@ -2,9 +2,8 @@ package com.ali.ayn.healthcare.activity.heightCalculator
 
 import android.content.Context
 import com.ali.ayn.healthcare.activity.heightResult.HeightResultActivity
-import javax.inject.Inject
 
-class HeightCalculatorModel @Inject constructor() {
+class HeightCalculatorModel  {
 
     fun calHeight(isBoy: Boolean, fatherHeight: Int, motherHeight: Int, context: Context) {
         var height = ((fatherHeight + motherHeight) / 2).toDouble()

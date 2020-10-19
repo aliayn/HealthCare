@@ -6,9 +6,8 @@ import android.widget.ImageButton
 import android.widget.TextView
 import com.ali.ayn.healthcare.base.BasePresenter
 import com.facebook.drawee.view.SimpleDraweeView
-import javax.inject.Inject
 
-class HeightResultPresenter @Inject constructor(model: HeightResultModel) :
+class HeightResultPresenter constructor(model: HeightResultModel) :
     BasePresenter<HeightResultView, HeightResultModel>(model) {
 
     fun setIntent(intent: Intent) {
