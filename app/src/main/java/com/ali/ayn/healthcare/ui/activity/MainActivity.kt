@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.helper.MainActivityDelegate
@@ -13,6 +14,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity(), MainActivityDelegate {
+
+    private var toggle: ActionBarDrawerToggle? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,14 +27,23 @@ class MainActivity : AppCompatActivity(), MainActivityDelegate {
         findNavController(R.id.nav_host_fragment).navigateUp()
 
     override fun setupNavDrawer(toolbar: Toolbar) {
-        val toggle = ActionBarDrawerToggle(
+        toggle = ActionBarDrawerToggle(
             this,
             drawer_layout,
             toolbar,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
-        drawer_layout.addDrawerListener(toggle)
-        toggle.syncState()
+        toggle?.let {
+            drawer_layout.addDrawerListener(it)
+            it.syncState()
+        }
+    }
+
+    override fun enableNavDrawer(enable: Boolean) {
+        val lockMode = if (enable) DrawerLayout.LOCK_MODE_UNLOCKED
+        else DrawerLayout.LOCK_MODE_LOCKED_CLOSED
+        drawer_layout.setDrawerLockMode(lockMode)
+        toggle?.isDrawerIndicatorEnabled = enable
     }
 }

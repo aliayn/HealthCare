@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.ali.ayn.healthcare.R
+import com.ali.ayn.healthcare.base.BaseFragment
 import com.ali.ayn.healthcare.helper.HEIGHT
 import com.ali.ayn.healthcare.helper.IS_BOY
 import com.ali.ayn.healthcare.helper.initToolbar
@@ -18,7 +19,7 @@ import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.support.v4.share
 
 @AndroidEntryPoint
-class HeightResultFragment : Fragment(R.layout.height_result_fragment) {
+class HeightResultFragment : BaseFragment(R.layout.height_result_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

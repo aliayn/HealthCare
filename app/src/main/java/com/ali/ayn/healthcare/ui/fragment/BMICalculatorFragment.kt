@@ -2,10 +2,12 @@ package com.ali.ayn.healthcare.ui.fragment
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.ali.ayn.healthcare.R
-import com.ali.ayn.healthcare.helper.initToolbar
+import com.ali.ayn.healthcare.base.BaseFragment
+import com.ali.ayn.healthcare.helper.*
 import com.ali.ayn.healthcare.viewmodel.BMIViewModel
 import com.xw.repo.BubbleSeekBar
 import dagger.hilt.android.AndroidEntryPoint
@@ -15,7 +17,7 @@ import org.jetbrains.anko.sdk27.coroutines.onClick
 import kotlin.math.roundToInt
 
 @AndroidEntryPoint
-class BMICalculatorFragment : Fragment(R.layout.bmi_calculator_fragment) {
+class BMICalculatorFragment : BaseFragment(R.layout.bmi_calculator_fragment) {
 
     private val viewModel: BMIViewModel by viewModels()
 
@@ -32,7 +34,9 @@ class BMICalculatorFragment : Fragment(R.layout.bmi_calculator_fragment) {
                 seekbar_height.progress,
                 seekbar_weight.progress
             ) {
-
+                val bundle =
+                    bundleOf(BMI to it, IS_MALE to toggle_gender.isChecked, IS_SAVED to false)
+                navigate(R.id.action_BMICalculatorFragment_to_BMIResultFragment, bundle)
             }
         }
     }

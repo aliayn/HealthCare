@@ -6,6 +6,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.ali.ayn.healthcare.R
+import com.ali.ayn.healthcare.base.BaseFragment
 import com.ali.ayn.healthcare.helper.HEIGHT
 import com.ali.ayn.healthcare.helper.IS_BOY
 import com.ali.ayn.healthcare.helper.initToolbar
@@ -17,7 +18,7 @@ import kotlinx.android.synthetic.main.toolbar.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
 @AndroidEntryPoint
-class HeightCalculatorFragment : Fragment(R.layout.height_calculator_fragment) {
+class HeightCalculatorFragment : BaseFragment(R.layout.height_calculator_fragment) {
 
     private val viewModel: HeightViewModel by viewModels()
 

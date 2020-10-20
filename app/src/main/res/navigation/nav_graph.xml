@@ -32,5 +32,13 @@
     <fragment
         android:id="@+id/BMICalculatorFragment"
         android:name="com.ali.ayn.healthcare.ui.fragment.BMICalculatorFragment"
-        android:label="BMICalculatorFragment" />
+        android:label="BMICalculatorFragment" >
+        <action
+            android:id="@+id/action_BMICalculatorFragment_to_BMIResultFragment"
+            app:destination="@id/BMIResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BMIResultFragment"
+        android:name="com.ali.ayn.healthcare.ui.fragment.BMIResultFragment"
+        android:label="BMIResultFragment" />
 </navigation>

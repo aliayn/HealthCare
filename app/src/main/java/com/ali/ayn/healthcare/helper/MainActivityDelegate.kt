@@ -6,4 +6,6 @@ interface MainActivityDelegate {
 
     fun setupNavDrawer(toolbar: Toolbar)
 
+    fun enableNavDrawer(enable: Boolean)
+
 }

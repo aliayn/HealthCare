@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "bmi_records", indices = [(Index(value = ["id"], unique = true))])
 data class BMI(
-    @PrimaryKey(autoGenerate = true) val id: Int?,
+    @PrimaryKey(autoGenerate = true) val id: Int? = 0,
     @ColumnInfo(name = "time") val time: Long? = 0,
     @ColumnInfo(name = "bmi") val bmi: Long = 0,
     @ColumnInfo(name = "isMale") val isMale: Boolean = false

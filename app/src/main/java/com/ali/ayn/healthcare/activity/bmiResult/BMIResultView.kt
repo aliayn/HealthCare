@@ -3,12 +3,12 @@ package com.ali.ayn.healthcare.activity.bmiResult
 import android.content.Context
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.base.BaseView
-import kotlinx.android.synthetic.main.activity_bmi_result.view.*
+import kotlinx.android.synthetic.main.bmi_result_fragment.view.*
 import org.jetbrains.anko.imageResource
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.textColor
 
-class BMIResultView(context: Context) : BaseView(context, R.layout.activity_bmi_result) {
+class BMIResultView(context: Context) : BaseView(context, R.layout.bmi_result_fragment) {
 
     fun isSaved(presenter: BMIResultPresenter) {
         if (presenter.isSaved()) {
@@ -34,6 +34,6 @@ class BMIResultView(context: Context) : BaseView(context, R.layout.activity_bmi_
     }
 
     fun finish(presenter: BMIResultPresenter) {
-        btn_back_bmi_result.onClick { presenter.finish() }
+       // btn_back_bmi_result.onClick { presenter.finish() }
     }
 }

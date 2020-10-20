@@ -44,6 +44,7 @@
     <string name="txt_list_bmi_saved">Records list:</string>
     <string name="txt_main_height_cal">Calculate Height</string>
     <string name="txt_main_height_result">Result Calculate Height</string>
+    <string name="txt_main_bmi_result">Result Calculate BMI</string>
     <string name="txt_main_height_cal_detail">Calculate the child\'s height by considering the height of the parent</string>
     <string name="txt_main_bmi_cal">Calculate BMI</string>
     <string name="txt_main_bmi_cal_detail">Calculate BMI by gender, age, height and weight</string>
