@@ -34,6 +34,6 @@ class MainFragment : Fragment(R.layout.main_fragment) {
         delegate?.setupNavDrawer(toolbar)
 
         relative_main_height.onClick { navigate(R.id.action_mainFragment_to_heightCalculatorFragment) }
-        relative_main_bmi.onClick { }
+        relative_main_bmi.onClick { navigate(R.id.action_mainFragment_to_BMICalculatorFragment) }
     }
 }

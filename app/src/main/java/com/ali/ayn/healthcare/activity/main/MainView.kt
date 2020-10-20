@@ -7,7 +7,7 @@ import android.text.SpannableString
 import android.view.MenuItem
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.base.BaseView
-import com.ali.ayn.healthcare.custom.CustomTypefaceSpan
+import com.ali.ayn.healthcare.helper.CustomTypefaceSpan
 import kotlinx.android.synthetic.main.activity_main.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 

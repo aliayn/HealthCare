@@ -4,10 +4,10 @@ import android.content.Context
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.base.BaseView
 import com.xw.repo.BubbleSeekBar
-import kotlinx.android.synthetic.main.activity_bmi_calculator.view.*
+import kotlinx.android.synthetic.main.bmi_calculator_fragment.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
-class BMICalculatorView(context: Context) : BaseView(context, R.layout.activity_bmi_calculator) {
+class BMICalculatorView(context: Context) : BaseView(context, R.layout.bmi_calculator_fragment) {
 
     fun calculate(presenter: BMICalculatorPresenter) {
         btn_bmi_cal.onClick {
@@ -107,7 +107,7 @@ class BMICalculatorView(context: Context) : BaseView(context, R.layout.activity_
     }
 
     fun finish(presenter: BMICalculatorPresenter) {
-        btn_back_bmi_cal.onClick { presenter.finish() }
+        //btn_back_bmi_cal.onClick { presenter.finish() }
     }
 
 }

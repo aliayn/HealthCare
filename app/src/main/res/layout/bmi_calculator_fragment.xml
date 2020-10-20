@@ -4,23 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:layoutDirection="rtl">
-
-            <ImageButton
-                android:id="@+id/btn_back_bmi_cal"
-                style="@style/BackButton"
-                app:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/toolbar"/>
 
     <RelativeLayout
         android:layout_width="match_parent"

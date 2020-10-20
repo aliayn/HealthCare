@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_mainFragment_to_heightCalculatorFragment"
             app:destination="@id/heightCalculatorFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_BMICalculatorFragment"
+            app:destination="@id/BMICalculatorFragment" />
     </fragment>
     <fragment
         android:id="@+id/heightCalculatorFragment"
@@ -26,4 +29,8 @@
         android:id="@+id/heightResultFragment"
         android:name="com.ali.ayn.healthcare.ui.fragment.HeightResultFragment"
         android:label="HeightResultFragment" />
+    <fragment
+        android:id="@+id/BMICalculatorFragment"
+        android:name="com.ali.ayn.healthcare.ui.fragment.BMICalculatorFragment"
+        android:label="BMICalculatorFragment" />
 </navigation>
