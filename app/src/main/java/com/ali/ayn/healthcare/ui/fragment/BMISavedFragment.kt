@@ -31,7 +31,6 @@ class BMISavedFragment : BaseFragment(R.layout.activity_bmi_saved) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val context = context ?: return
-        initToolbar(toolbar, resources.getString(R.string.bmi_saved_navigation), true)
 
         val bmiSavedAdapter = BmiSavedAdapter {
             val bundle =

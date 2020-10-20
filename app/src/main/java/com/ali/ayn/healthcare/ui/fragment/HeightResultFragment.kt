@@ -25,8 +25,6 @@ class HeightResultFragment : BaseFragment(R.layout.height_result_fragment) {
         super.onViewCreated(view, savedInstanceState)
         val context = context ?: return
 
-        initToolbar(toolbar, resources.getString(R.string.txt_main_height_result), true)
-
         val height = arguments?.getLong(HEIGHT)
         val isBoy = arguments?.getBoolean(IS_BOY)
 

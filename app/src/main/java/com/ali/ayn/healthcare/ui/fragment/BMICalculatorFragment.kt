@@ -23,7 +23,6 @@ class BMICalculatorFragment : BaseFragment(R.layout.bmi_calculator_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initToolbar(toolbar, resources.getString(R.string.txt_main_bmi_cal), true)
         initViews()
         calculateBMI()
     }

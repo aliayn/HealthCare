@@ -25,8 +25,6 @@ class HeightCalculatorFragment : BaseFragment(R.layout.height_calculator_fragmen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initToolbar(toolbar, resources.getString(R.string.txt_main_height_cal), true)
-
         btn_height_result.onClick { calculateHeight() }
     }
 

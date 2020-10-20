@@ -26,8 +26,6 @@ class BMIResultFragment : BaseFragment(R.layout.bmi_result_fragment) {
         super.onViewCreated(view, savedInstanceState)
         val context = context ?: return
 
-        initToolbar(toolbar, resources.getString(R.string.txt_main_bmi_result), true)
-
         val bmi = arguments?.getDouble(BMI) ?: return
         val isSaved = arguments?.getBoolean(IS_SAVED) ?: return
         val time = arguments?.getLong(TIME)

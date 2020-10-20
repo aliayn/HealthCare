@@ -9,6 +9,10 @@ import com.ali.ayn.healthcare.helper.MainActivityDelegate
 open class BaseFragment(@LayoutRes contentLayoutId: Int) : Fragment(contentLayoutId) {
 
     private var delegate: MainActivityDelegate? = null
+    set(value) {
+        field = value
+        enableNavDrawer(false)
+    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
