@@ -5,24 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
-
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:layoutDirection="rtl">
-
-            <ImageButton
-                android:id="@+id/btn_back_bmi_save"
-                style="@style/BackButton"
-                app:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/toolbar" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -82,8 +65,10 @@
                     android:id="@+id/recycler_bmi_saved"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     android:layout_below="@+id/line_record_list"
-                    android:layout_marginBottom="@dimen/standard_margin" />
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    tools:listitem="@layout/bmi_saved_recycler_layout" />
 
                 <com.github.mikephil.charting.charts.BarChart
                     android:id="@+id/chart"

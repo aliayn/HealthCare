@@ -8,7 +8,9 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.helper.MainActivityDelegate
-import com.ali.ayn.healthcare.helper.setFont
+import com.ali.ayn.healthcare.helper.setNavControllerForNavigation
+import com.ali.ayn.healthcare.helper.setNavControllerForToolbar
+import com.ali.ayn.healthcare.helper.setNavigationFont
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -20,11 +22,12 @@ class MainActivity : AppCompatActivity(), MainActivityDelegate {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        nav_view.setFont(this)
+        setNavigationFont()
+        setNavControllerForNavigation()
+        setNavControllerForToolbar()
+        setupNavDrawer(toolbar_main)
+        enableNavDrawer(true)
     }
-
-    override fun onSupportNavigateUp(): Boolean =
-        findNavController(R.id.nav_host_fragment).navigateUp()
 
     override fun setupNavDrawer(toolbar: Toolbar) {
         toggle = ActionBarDrawerToggle(

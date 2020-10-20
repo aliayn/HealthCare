@@ -5,7 +5,7 @@
         android:menuCategory="system">
 
         <item
-            android:id="@+id/bmi_saved"
+            android:id="@+id/BMISavedFragment"
             android:icon="@drawable/ic_save_black_24dp"
             android:title="@string/bmi_saved_navigation" />
 

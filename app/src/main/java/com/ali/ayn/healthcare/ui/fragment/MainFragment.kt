@@ -16,11 +16,7 @@ class MainFragment : BaseFragment(R.layout.main_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        initToolbar(toolbar, resources.getString(R.string.app_name), false)
-        setupNavDrawer(toolbar)
         enableNavDrawer(true)
-
         relative_main_height.onClick { navigate(R.id.action_mainFragment_to_heightCalculatorFragment) }
         relative_main_bmi.onClick { navigate(R.id.action_mainFragment_to_BMICalculatorFragment) }
     }

@@ -61,7 +61,7 @@ class BmiSavedView(context: Context) : BaseView(context, R.layout.activity_bmi_s
     }
 
     fun finish(presenter: BmiSavedPresenter) {
-        btn_back_bmi_save.onClick { presenter.finish() }
+        //btn_back_bmi_save.onClick { presenter.finish() }
     }
 
     fun clearData() {
