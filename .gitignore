@@ -1,0 +1,19 @@
+*.iml
+*.aab
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/gradle.xml
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+
+# my list
+Thumbs.db
+/.idea/markdown*
+google-services.json
