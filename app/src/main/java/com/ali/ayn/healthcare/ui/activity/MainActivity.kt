@@ -32,10 +32,9 @@ class MainActivity : AppCompatActivity(), MainActivityDelegate {
             toolbar,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
-        )
-        toggle?.let {
-            drawer_layout.addDrawerListener(it)
-            it.syncState()
+        ).apply {
+            drawer_layout.addDrawerListener(this)
+            syncState()
         }
     }
 

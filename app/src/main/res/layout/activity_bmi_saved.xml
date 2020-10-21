@@ -63,9 +63,9 @@
                     android:id="@+id/recycler_bmi_saved"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     android:layout_below="@+id/line_record_list"
                     android:layout_marginBottom="@dimen/standard_margin"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:listitem="@layout/bmi_saved_recycler_layout" />
 
                 <com.github.mikephil.charting.charts.BarChart

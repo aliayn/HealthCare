@@ -20,7 +20,7 @@
         android:id="@+id/heightCalculatorFragment"
         android:name="com.ali.ayn.healthcare.ui.fragment.HeightCalculatorFragment"
         android:label="height_calculator_fragment"
-        tools:layout="@layout/height_calculator_fragment" >
+        tools:layout="@layout/height_calculator_fragment">
         <action
             android:id="@+id/action_heightCalculatorFragment_to_heightResultFragment"
             app:destination="@id/heightResultFragment" />
@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/BMICalculatorFragment"
         android:name="com.ali.ayn.healthcare.ui.fragment.BMICalculatorFragment"
-        android:label="BMICalculatorFragment" >
+        android:label="BMICalculatorFragment">
         <action
             android:id="@+id/action_BMICalculatorFragment_to_BMIResultFragment"
             app:destination="@id/BMIResultFragment" />
@@ -44,7 +44,7 @@
     <fragment
         android:id="@+id/BMISavedFragment"
         android:name="com.ali.ayn.healthcare.ui.fragment.BMISavedFragment"
-        android:label="BMISavedFragment" >
+        android:label="BMISavedFragment">
         <action
             android:id="@+id/action_BMISavedFragment_to_BMIResultFragment"
             app:destination="@id/BMIResultFragment" />

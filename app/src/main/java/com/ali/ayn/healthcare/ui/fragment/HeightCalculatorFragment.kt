@@ -3,18 +3,15 @@ package com.ali.ayn.healthcare.ui.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.base.BaseFragment
 import com.ali.ayn.healthcare.helper.HEIGHT
 import com.ali.ayn.healthcare.helper.IS_BOY
-import com.ali.ayn.healthcare.helper.initToolbar
 import com.ali.ayn.healthcare.helper.navigate
 import com.ali.ayn.healthcare.viewmodel.HeightViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.height_calculator_fragment.*
-import kotlinx.android.synthetic.main.toolbar.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
 @AndroidEntryPoint

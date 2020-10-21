@@ -20,9 +20,9 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_main"
                 android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
                 android:background="@color/colorPrimary"
-                android:theme="@style/ToolbarThemeWhite"
-                android:layout_height="?attr/actionBarSize"/>
+                android:theme="@style/ToolbarThemeWhite" />
 
         </RelativeLayout>
 

@@ -34,6 +34,6 @@ class BMIResultView(context: Context) : BaseView(context, R.layout.bmi_result_fr
     }
 
     fun finish(presenter: BMIResultPresenter) {
-       // btn_back_bmi_result.onClick { presenter.finish() }
+        // btn_back_bmi_result.onClick { presenter.finish() }
     }
 }

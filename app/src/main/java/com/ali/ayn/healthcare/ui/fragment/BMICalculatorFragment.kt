@@ -3,16 +3,17 @@ package com.ali.ayn.healthcare.ui.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.base.BaseFragment
-import com.ali.ayn.healthcare.helper.*
+import com.ali.ayn.healthcare.helper.BMI
+import com.ali.ayn.healthcare.helper.IS_MALE
+import com.ali.ayn.healthcare.helper.IS_SAVED
+import com.ali.ayn.healthcare.helper.navigate
 import com.ali.ayn.healthcare.viewmodel.BMIViewModel
 import com.xw.repo.BubbleSeekBar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.bmi_calculator_fragment.*
-import kotlinx.android.synthetic.main.toolbar.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import kotlin.math.roundToInt
 

@@ -20,7 +20,6 @@ import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_bmi_saved.*
-import kotlinx.android.synthetic.main.toolbar.*
 import java.util.*
 
 @AndroidEntryPoint

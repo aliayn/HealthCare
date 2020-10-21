@@ -2,7 +2,6 @@ package com.ali.ayn.healthcare.activity.bmiSaved
 
 import android.app.Activity
 import android.content.Context
-import com.ali.ayn.healthcare.App
 import com.ali.ayn.healthcare.base.BaseActivity
 
 class BmiSavedActivity : BaseActivity<BmiSavedView, BmiSavedPresenter>() {

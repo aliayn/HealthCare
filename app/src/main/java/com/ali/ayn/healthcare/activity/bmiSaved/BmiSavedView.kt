@@ -12,7 +12,6 @@ import com.github.mikephil.charting.highlight.Highlight
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener
 import kotlinx.android.synthetic.main.activity_bmi_saved.view.*
-import org.jetbrains.anko.sdk27.coroutines.onClick
 import java.util.*
 
 class BmiSavedView(context: Context) : BaseView(context, R.layout.activity_bmi_saved) {

@@ -16,7 +16,7 @@ fun NavigationView.setFont(context: Context) {
         if (subMenu != null && subMenu.size() > 0) {
             for (j in 0 until subMenu.size()) {
                 val subMenuItem = subMenu.getItem(j)
-                applyFontToMenuItem(context,subMenuItem)
+                applyFontToMenuItem(context, subMenuItem)
             }
         }
         applyFontToMenuItem(context, mi)

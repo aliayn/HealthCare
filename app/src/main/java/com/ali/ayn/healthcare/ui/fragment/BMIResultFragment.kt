@@ -5,15 +5,16 @@ import android.os.Bundle
 import android.view.View
 import android.widget.FrameLayout
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.base.BaseFragment
-import com.ali.ayn.healthcare.helper.*
+import com.ali.ayn.healthcare.helper.BMI
+import com.ali.ayn.healthcare.helper.IS_MALE
+import com.ali.ayn.healthcare.helper.IS_SAVED
+import com.ali.ayn.healthcare.helper.TIME
 import com.ali.ayn.healthcare.viewmodel.BMIViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.bmi_result_fragment.*
-import kotlinx.android.synthetic.main.toolbar.*
 import org.jetbrains.anko.imageResource
 import org.jetbrains.anko.textColor
 
