@@ -11,10 +11,10 @@ import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.highlight.Highlight
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener
-import kotlinx.android.synthetic.main.activity_bmi_saved.view.*
+import kotlinx.android.synthetic.main.bmi_saved_fragment.view.*
 import java.util.*
 
-class BmiSavedView(context: Context) : BaseView(context, R.layout.activity_bmi_saved) {
+class BmiSavedView(context: Context) : BaseView(context, R.layout.bmi_saved_fragment) {
 
     private var layoutManager: LinearLayoutManager? = null
 

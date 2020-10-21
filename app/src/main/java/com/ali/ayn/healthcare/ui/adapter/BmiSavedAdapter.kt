@@ -1,6 +1,7 @@
 package com.ali.ayn.healthcare.ui.adapter
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -22,11 +23,8 @@ class BmiSavedAdapter(private val callback: (BMI) -> Unit) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BMIViewHolder {
         return BMIViewHolder(
-            View.inflate(
-                parent.context,
-                R.layout.bmi_saved_recycler_layout,
-                parent
-            )
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.bmi_saved_recycler_layout, parent, false)
         )
     }
 

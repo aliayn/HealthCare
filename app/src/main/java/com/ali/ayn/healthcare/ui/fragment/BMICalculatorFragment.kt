@@ -32,7 +32,7 @@ class BMICalculatorFragment : BaseFragment(R.layout.bmi_calculator_fragment) {
             viewModel.calculateBMI(
                 seekbar_height.progress,
                 seekbar_weight.progress,
-                toggle_gender.isChecked
+                !toggle_gender.isChecked
             ) {
                 val bundle = bundleOf(BMI_CLASS to it, IS_SAVED to false)
                 navigate(R.id.action_BMICalculatorFragment_to_BMIResultFragment, bundle)
