@@ -8,37 +8,38 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.base.BaseFragment
-import com.ali.ayn.healthcare.helper.BMI
-import com.ali.ayn.healthcare.helper.IS_MALE
+import com.ali.ayn.healthcare.data.local.entity.BMI
+import com.ali.ayn.healthcare.helper.BMI_CLASS
 import com.ali.ayn.healthcare.helper.IS_SAVED
-import com.ali.ayn.healthcare.helper.TIME
 import com.ali.ayn.healthcare.viewmodel.BMIViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.bmi_result_fragment.*
 import org.jetbrains.anko.imageResource
+import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.textColor
 
 @AndroidEntryPoint
 class BMIResultFragment : BaseFragment(R.layout.bmi_result_fragment) {
 
     private val viewModel: BMIViewModel by viewModels()
+    private var bmi: BMI? = null
+    private var save: Boolean = false
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val context = context ?: return
 
-        val bmi = arguments?.getDouble(BMI) ?: return
+        bmi = arguments?.getParcelable(BMI_CLASS) as BMI
         val isSaved = arguments?.getBoolean(IS_SAVED) ?: return
-        val time = arguments?.getLong(TIME)
-        val isMale = arguments?.getBoolean(IS_MALE) ?: return
+        save = isSaved
 
-        initView(bmi.toInt(), isMale, isSaved, context)
+        bmi?.let { initView(it.bmi.toInt(), it.isMale, context) }
     }
 
-    private fun initView(bmi: Int, isMale: Boolean, isSaved: Boolean, context: Context) {
+    private fun initView(bmi: Int, isMale: Boolean, context: Context) {
         setBmiDescription(bmi, isMale, context)
         setBmi(bmi, context)
-        setSaveImage(isSaved)
+        saveBMI()
     }
 
     private fun setBmiDescription(bmi: Int, isMale: Boolean, context: Context) {
@@ -82,10 +83,20 @@ class BMIResultFragment : BaseFragment(R.layout.bmi_result_fragment) {
 
     }
 
-    private fun setSaveImage(isSaved: Boolean) {
-        if (isSaved)
+    private fun saveBMI() {
+        if (save)
             btn_save_result.imageResource = R.drawable.ic_turned_in_48px
-
+        btn_save_result.onClick {
+            if (save) {
+                btn_save_result.imageResource = R.drawable.ic_turned_in_not_48px
+                bmi?.let { viewModel.delete(it) }
+                save = false
+            } else {
+                btn_save_result.imageResource = R.drawable.ic_turned_in_48px
+                bmi?.let { viewModel.save(it) }
+                save = true
+            }
+        }
     }
 
     private fun getColor(bmi: Int, context: Context): Int {

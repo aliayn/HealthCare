@@ -32,8 +32,7 @@ class BMISavedFragment : BaseFragment(R.layout.activity_bmi_saved) {
         val context = context ?: return
 
         val bmiSavedAdapter = BmiSavedAdapter {
-            val bundle =
-                bundleOf(BMI to it.bmi, IS_SAVED to true, TIME to it.time, IS_MALE to it.isMale)
+            val bundle = bundleOf(BMI_CLASS to it, IS_SAVED to true)
             navigate(R.id.action_BMISavedFragment_to_BMIResultFragment, bundle)
         }
 

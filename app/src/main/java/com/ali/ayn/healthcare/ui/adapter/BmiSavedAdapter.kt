@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.ali.ayn.healthcare.R
@@ -48,7 +49,12 @@ class BmiSavedAdapter(private val callback: (BMI) -> Unit) :
             txtBmi.text = model.bmi.toString()
             if (!model.isMale) {
                 imageView.imageResource = R.drawable.ic_woman
-                txtDate.setBackgroundColor(itemView.context.resources.getColor(R.color.colorPrimary))
+                txtDate.setBackgroundColor(
+                    ContextCompat.getColor(
+                        itemView.context,
+                        R.color.colorPrimary
+                    )
+                )
             }
         }
 
@@ -85,10 +91,10 @@ class BmiSavedAdapter(private val callback: (BMI) -> Unit) :
 
         private fun getColor(bmi: Int, context: Context): Int {
             return when {
-                bmi < 20 -> context.resources.getColor(R.color.blue)
-                bmi < 25 -> context.resources.getColor(R.color.green)
-                bmi < 30 -> context.resources.getColor(R.color.yellow)
-                else -> context.resources.getColor(R.color.red)
+                bmi < 20 -> ContextCompat.getColor(context, R.color.blue)
+                bmi < 25 -> ContextCompat.getColor(context, R.color.green)
+                bmi < 30 -> ContextCompat.getColor(context, R.color.yellow)
+                else -> ContextCompat.getColor(context, R.color.red)
             }
         }
     }

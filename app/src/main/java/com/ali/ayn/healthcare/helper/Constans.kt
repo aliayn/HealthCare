@@ -8,6 +8,7 @@ const val IS_BOY = "is_boy"
 const val IS_MALE = "is_male"
 const val IS_SAVED = "is_saved"
 const val BMI = "bmi"
+const val BMI_CLASS = "bmi_class"
 const val TIME = "time"
 
 fun xAxisList(context: Context) = arrayListOf(

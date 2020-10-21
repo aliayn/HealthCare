@@ -6,8 +6,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import com.ali.ayn.healthcare.R
 import com.ali.ayn.healthcare.base.BaseFragment
-import com.ali.ayn.healthcare.helper.BMI
-import com.ali.ayn.healthcare.helper.IS_MALE
+import com.ali.ayn.healthcare.helper.BMI_CLASS
 import com.ali.ayn.healthcare.helper.IS_SAVED
 import com.ali.ayn.healthcare.helper.navigate
 import com.ali.ayn.healthcare.viewmodel.BMIViewModel
@@ -32,10 +31,10 @@ class BMICalculatorFragment : BaseFragment(R.layout.bmi_calculator_fragment) {
         btn_bmi_cal.onClick {
             viewModel.calculateBMI(
                 seekbar_height.progress,
-                seekbar_weight.progress
+                seekbar_weight.progress,
+                toggle_gender.isChecked
             ) {
-                val bundle =
-                    bundleOf(BMI to it, IS_MALE to toggle_gender.isChecked, IS_SAVED to false)
+                val bundle = bundleOf(BMI_CLASS to it, IS_SAVED to false)
                 navigate(R.id.action_BMICalculatorFragment_to_BMIResultFragment, bundle)
             }
         }

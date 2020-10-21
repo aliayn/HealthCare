@@ -18,17 +18,28 @@ class BMIViewModel @ViewModelInject constructor(
 
     val allBMIRecords = bmiRepository.getAllBMIs()
 
-    inline fun calculateBMI(height: Int, weight: Int, callback: (Double) -> Unit) {
+    fun calculateBMI(height: Int, weight: Int, isMale: Boolean, callback: (BMI) -> Unit) {
         val bmi = weight / ((height / 100.0) * (height / 100.0))
-        callback.invoke(bmi)
+        generateBMI(bmi.toLong(), isMale, callback)
     }
 
-    fun save(bmi: Long, time: Long, isMale: Boolean) {
-        insert(BMI(time = Date().time, bmi = bmi, isMale = isMale))
+    private inline fun generateBMI(bmi: Long, isMale: Boolean, callback: (BMI) -> Unit) {
+        callback.invoke(BMI(bmi = bmi, isMale = isMale))
+    }
+
+    fun save(bmi: BMI) {
+        if (bmi.time == 0L)
+            insert(BMI(time = Date().time, bmi = bmi.bmi, isMale = bmi.isMale))
+        else
+            insert(BMI(time = bmi.time, bmi = bmi.bmi, isMale = bmi.isMale))
     }
 
     private fun insert(bmi: BMI) = viewModelScope.launch(IO) {
         bmiRepository.insertOrUpdate(bmi)
+    }
+
+    fun delete(bmi: BMI) = viewModelScope.launch(IO) {
+        bmiRepository.delete(bmi)
     }
 
     fun getXAxisValues(context: Context) = xAxisList(context)

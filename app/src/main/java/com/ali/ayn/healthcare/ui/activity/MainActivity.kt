@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import com.ali.ayn.healthcare.R
+import com.ali.ayn.healthcare.data.local.db.BMIDataBase
 import com.ali.ayn.healthcare.helper.MainActivityDelegate
 import com.ali.ayn.healthcare.helper.setupNavigation
 import com.ali.ayn.healthcare.helper.setupToolbar
@@ -43,5 +44,10 @@ class MainActivity : AppCompatActivity(), MainActivityDelegate {
         else DrawerLayout.LOCK_MODE_LOCKED_CLOSED
         drawer_layout.setDrawerLockMode(lockMode)
         toggle?.isDrawerIndicatorEnabled = enable
+    }
+
+    override fun onDestroy() {
+        BMIDataBase.destroyInstance()
+        super.onDestroy()
     }
 }
